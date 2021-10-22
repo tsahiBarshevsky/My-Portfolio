@@ -1,0 +1,76 @@
+@import '../../_variables'
+
+.hero-container
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    //padding: 0 20px
+    width: 100%
+    height: 100vh
+    color: white
+    background-color: $primary
+    z-index: 1
+    text-align: center
+    cursor: default
+
+    @media screen and ( max-width: $sm )
+        height: 100%
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        opacity: 0.25
+        background: linear-gradient(to top, #222733, #222733cc, #22273399, #22273399, #22273399), url(../../assets/hero.jpg) no-repeat center center
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        pointer-events: none
+        filter: blur(1.5px)
+
+    #rectangle
+        background-color: #2e3445
+        z-index: 1
+        width: 100%
+        height: 25px
+
+        @media screen and ( max-width: $sm )
+            display: none
+
+    #oval
+        background-color: #2e3445
+        z-index: 1
+        width: 100%
+        height: fit-content
+        padding: 60px 40px
+        border-radius: 70% / 100%
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        margin-bottom: 10px
+
+        h1
+            font-family: 'Josefin Sans', sans-serif
+            font-size: 5vw
+            text-transform: uppercase
+            margin-bottom: 15px
+            font-weight: normal
+
+            @media screen and ( max-width: $sm )
+                font-size: 10vw
+
+        h3
+            font-family: 'Josefin Sans', sans-serif
+            text-transform: uppercase
+            font-weight: bold
+            letter-spacing: 2px
+
+    .bighead-wrapper
+        width: 200px
+        height: 200px
+        z-index: 1
