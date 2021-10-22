@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutSection from './components/About';
 import './styles.sass';
+import ProjectsSection from './components/Projects';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                     <Navbar />
                     <Hero />
                     <AboutSection />
+                    <ProjectsSection />
                 </Route>
             </Switch>
         </Router>

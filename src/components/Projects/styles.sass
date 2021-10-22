@@ -1,6 +1,6 @@
 @import '../../_variables'
 
-#about-section
+#projects-section
     display: flex
     flex-direction: column
     justify-content: flex-start
@@ -38,32 +38,13 @@
             box-shadow: 1px 2px 1px #000000CC
             border-radius: 10px
 
-    .grid-container
-        width: 80%
+    .cards
+        display: grid
+        // grid-gap: 40px 60px
+        grid-template-columns: repeat(3, 1fr)
 
-        @media screen and ( max-width: $md )
-            width: 100%
+        @media screen and ( max-width: $sm )
+            grid-template-columns: repeat(2, 1fr)
 
-    .about
-        width: 80%
-
-        .profile-image
-            width: 200px
-            height: 200px
-            border-radius: 50%
-            object-fit: cover
-            object-position: center center
-
-        .about-text
-            font-size: 20px
-
-    .skills
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        align-items: flex-start
-        width: fit-content
-
-    .subtitle
-        text-shadow: 1px 2px 1px #000000CC
-        margin-bottom: 15px
+        @media screen and ( max-width: 640px )
+            grid-template-columns: repeat(1, 1fr)
