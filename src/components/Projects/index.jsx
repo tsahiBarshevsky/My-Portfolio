@@ -1,8 +1,12 @@
 import React from 'react';
+import { projects } from '../../data/projects';
 import Card from './Card/index';
 import './styles.sass';
 
 const ProjectsSection = () => {
+
+    const projectsArray = Array.from(projects, ([key, properties]) => ({ key, properties }));
+
     return (
         <div id="projects-section">
             <div className="title-container">
@@ -10,18 +14,11 @@ const ProjectsSection = () => {
                 <div className="divider" />
             </div>
             <div className="cards">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {projectsArray.map((project) => {
+                    return (
+                        <Card key={project.key} project={project.properties} />
+                    )
+                })}
             </div>
         </div>
     )
