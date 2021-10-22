@@ -6,7 +6,6 @@
     flex-direction: column
     justify-content: flex-start
     align-items: center
-    //padding: 0 20px
     width: 100%
     height: 100vh
     color: white
@@ -35,16 +34,16 @@
         filter: blur(1.5px)
 
     #rectangle
-        background-color: #2e3445
+        background-color: $secondary
         z-index: 1
         width: 100%
-        height: 25px
+        height: 50px
 
         @media screen and ( max-width: $sm )
-            display: none
+            height: 30px
 
     #oval
-        background-color: #2e3445
+        background-color: $secondary
         z-index: 1
         width: 100%
         height: fit-content

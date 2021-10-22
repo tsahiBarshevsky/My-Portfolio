@@ -5,7 +5,7 @@ import './styles.sass';
 const Hero = () => {
 
     return (
-        <div className="hero-container">
+        <div className="hero-container" id="home">
             <div id="rectangle" />
             <div id="oval">
                 <h1>Tsahi Barshavsky</h1>
