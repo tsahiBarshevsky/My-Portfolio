@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import './styles.sass';
 
-const Card = ({ project }) => {
+const Card = ({ project, identifier }) => {
 
     const CardContainer = styled.div`
         width: 390px;
@@ -17,6 +18,9 @@ const Card = ({ project }) => {
 
     return (
         <CardContainer>
+            <Link to={{ pathname: `/${identifier}` }}>
+                Go to project
+            </Link>
         </CardContainer>
     )
 }

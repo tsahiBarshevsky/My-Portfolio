@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import AboutSection from './components/About';
 import './styles.sass';
 import ProjectsSection from './components/Projects';
+import Project from './components/Project';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                     <AboutSection />
                     <ProjectsSection />
                 </Route>
+                <Route exact path="/:title" component={Project} />
             </Switch>
         </Router>
     )

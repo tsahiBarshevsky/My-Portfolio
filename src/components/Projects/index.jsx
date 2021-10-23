@@ -16,7 +16,11 @@ const ProjectsSection = () => {
             <div className="cards">
                 {projectsArray.map((project) => {
                     return (
-                        <Card key={project.key} project={project.properties} />
+                        <Card
+                            key={project.key}
+                            project={project.properties}
+                            identifier={project.key}
+                        />
                     )
                 })}
             </div>
