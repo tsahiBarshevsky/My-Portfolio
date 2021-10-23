@@ -4,10 +4,67 @@ import emailjs from 'emailjs-com';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useStyles from './styles';
+import { makeStyles } from '@mui/styles';
 import './styles.sass';
 
-const Contact = () => {
+const useStyles = makeStyles({
+    title:
+    {
+        fontFamily: `'Eurostile', sans-serif`,
+        color: '#cacaca',
+        textShadow: '1px 2px 1px #000000CC',
+        letterSpacing: 1.5,
+        lineHeight: 1
+    },
+    input:
+    {
+        "&&": {
+            backgroundColor: '#2e3445',
+            marginBottom: 15,
+            borderRadius: 10,
+            width: 450,
+            '@media (max-width: 550px)':
+            {
+                width: '100%'
+            }
+        }
+    },
+    message: {
+        height: 185
+    },
+    placeholder:
+    {
+        '&&': {
+            color: 'white',
+            "&::placeholder":
+            {
+                color: "white",
+            }
+        }
+    },
+    submit:
+    {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            backgroundColor: '#3498db',
+            textTransform: 'capitalize',
+            color: 'white',
+            marginTop: 10,
+            borderRadius: 25,
+            width: 100,
+            height: 37,
+            fontSize: 20,
+            '&:hover':
+            {
+                backgroundColor: '#3498dbCC'
+            }
+
+        }
+    }
+});
+
+const ContactSection = () => {
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -44,6 +101,7 @@ const Contact = () => {
             </div>
             <form className="contact-form" onSubmit={sendEmail}>
                 <TextField
+                    className={classes.input}
                     placeholder="Name"
                     required
                     autoComplete="off"
@@ -55,7 +113,6 @@ const Contact = () => {
                         classes: { input: classes.placeholder },
                         style: { fontFamily: 'Glory', padding: '5px 15px' }
                     }}
-                    className={classes.input}
                     variant='standard'
                 />
                 <TextField
@@ -112,9 +169,7 @@ const Contact = () => {
                     className={classes.submit}
                     type="submit"
                 >
-                    <span>
-                        Send
-                    </span>
+                    Send
                 </Button>
             </form>
             <ToastContainer
@@ -130,4 +185,4 @@ const Contact = () => {
     )
 }
 
-export default Contact;
+export default ContactSection;
