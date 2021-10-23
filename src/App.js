@@ -6,6 +6,7 @@ import AboutSection from './components/About';
 import './styles.sass';
 import ProjectsSection from './components/Projects';
 import Project from './components/Project';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                     <Hero />
                     <AboutSection />
                     <ProjectsSection />
+                    <Footer />
                 </Route>
                 <Route exact path="/:title" component={Project} />
             </Switch>

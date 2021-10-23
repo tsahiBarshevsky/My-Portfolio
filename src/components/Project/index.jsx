@@ -4,6 +4,7 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { useHistory } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 import { projects } from '../../data/projects';
+import Footer from '../Footer';
 import clsx from 'clsx';
 import useStyles from './styles';
 import './styles.sass';
@@ -122,6 +123,7 @@ const Project = (props) => {
                         gyroscope; picture-in-picture" />
                     </div>}
             </div>
+            <Footer />
         </>
     )
 }
