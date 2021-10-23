@@ -18,16 +18,27 @@ const Card = ({ project, identifier }) => {
     // `;
 
     return (
+        // <div className="card-container">
+        //     <div className="read-more">
+        //         <h3>{project.title}</h3>
+        //         <h6>{project.type}</h6>
+        //         <Button
+        //             component={Link}
+        //             to={{ pathname: `/${identifier}` }}
+        //             className="link-button"
+        //         >
+        //             Read more
+        //         </Button>
+        //     </div>
+        // </div>
         <div className="card-container">
-            <div className="read-more">
+            <img className="image" src={project.image} alt={project.title} />
+            <div className="white" />
+            <div className="overlay-up-to-down">
                 <h3>{project.title}</h3>
-                <Button
-                    component={Link}
-                    to={{ pathname: `/${identifier}` }}
-                    className="link-button"
-                >
-                    Read more
-                </Button>
+            </div>
+            <div className="overlay-down-to-up">
+                <h3>{project.type}</h3>
             </div>
         </div>
     )

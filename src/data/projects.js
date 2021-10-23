@@ -3,6 +3,7 @@ export let projects = new Map()
         {
             index: 12,
             title: 'Save The Date',
+            type: 'MERN Stack / Native app',
             subtitle: "Medicines management native app with a main feature: Calculating the date it should be thrown",
             date: new Date("2021-10-21"),
             image: 'https://lh3.googleusercontent.com/QynzJ6rPojT59Dni1j24qHBum94GOTM-MUxJOMeW1PlhxQWSCxH5kWVA9CfPU-TXHmXsTJvDYPJ3FqCr2cLKbHYdLJhElhz3jc8NXmyFQVnyCeoYA30lFhLSZsd06EJHqUu4Z6RZkw=w2400',
@@ -34,7 +35,6 @@ export let projects = new Map()
                 { id: 3, caption: 'APK and simulator (for ios) files', url: 'https://drive.google.com/drive/folders/1mf-KnPfsnroWlUucACkVYsoIdicOMLuZ?usp=sharing' },
             ],
             otherCreators: [],
-            type: 'MERN Stack',
             youtube: null,
             images: [
                 {
@@ -53,7 +53,6 @@ export let projects = new Map()
                     original: 'https://lh3.googleusercontent.com/MlapSOb55XopACTWgGXb75QQHZY5M37nPim1mRBzO3EV3z27vzrwP26XdPEp8vGjvghTPZEEJjOxf7N_icgjmgmcQJlKbKaIMGwDT9aMTxMqi_aAHbwt82t21bk3CxzEyQVwZZ8i7A=w2400',
                 },
             ],
-            top: true,
             web: false
         })
     .set('note-to-self',
@@ -94,7 +93,6 @@ export let projects = new Map()
                     original: 'https://lh3.googleusercontent.com/ET0YgklXsD-xA3NvODqtvS0qiF3Rz_VoSfGWgDWO4Aa00GeaWPg65s98_At1_ty3HudifRoPp7bLBsjAmue02WfvRAOhFfCd1xcNGHY_aq8LaGEVMgMiQCdQXdyREw6MT6ls8Gsseg=w2400',
                 },
             ],
-            top: false,
             web: false
         })
     .set('jobi',

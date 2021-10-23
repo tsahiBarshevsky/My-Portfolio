@@ -1,27 +1,90 @@
 @import '../../../_variables'
 
+// .card-container
+//     width: 390px
+//     height: 300px
+//     background-image: url(https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+//     background-size: 100% 100%
+//     position: relative
+
+//     @media screen and ( max-width: 450px )
+//         width: 100%
+
+//     &:hover > .read-more
+//         opacity: 1
+//         transition: opacity 0.8s
+
+//     .read-more
+//         position: relative
+//         display: flex
+//         flex-direction: column
+//         justify-content: center
+//         align-items: center
+//         height: 100%
+//         padding: 40px 20px 0
+//         color: black
+//         opacity: 0
+//         background-color: white
+//         z-index: 1
+
+//         .link-button
+
 .card-container
+    position: relative
     width: 390px
     height: 300px
-    background-image: url(https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-    background-size: 100% 100%
-    position: relative
+    background-color: white
 
-    &:hover > .read-more
+    &:hover > .overlay-up-to-down
+        height: 50%
+        opacity: 1
+
+    &:hover > .overlay-down-to-up
+        height: 50%
+
+    &:hover > .white
         opacity: 1
         transition: opacity 0.8s
 
-    .read-more
-        position: relative
+    .white
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: white
+        overflow: hidden
+        width: 100%
+        height: 100%
+        transition: .5s ease-in-out
+        opacity: 0
+
+    .image
+        display: block
+        width: 100%
+        height: 100%
+
+    .overlay-up-to-down
         display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
-        height: 100%
-        padding: 40px 20px 0
-        color: black
+        position: absolute
         opacity: 0
-        background-color: white
-        z-index: 1
+        top: 0
+        right: 0
+        bottom: 100%
+        height: 0
+        width: 100%
+        transition: .5s ease-in-out
 
-        .link-button
+    .overlay-down-to-up
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        overflow: hidden
+        width: 100%
+        height: 0
+        transition: .5s ease-in-out
