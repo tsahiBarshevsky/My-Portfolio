@@ -29,7 +29,6 @@ const Navbar = () => {
                                 to='about'
                                 smooth spy
                                 exact='true'
-                                offset={-20}
                                 activeClass="active"
                                 className="link"
                             >
@@ -41,7 +40,6 @@ const Navbar = () => {
                                 to='projects'
                                 smooth spy
                                 exact='true'
-                                offset={-20}
                                 activeClass="active"
                                 className="link"
                             >
@@ -53,7 +51,6 @@ const Navbar = () => {
                                 to='contact'
                                 smooth spy
                                 exact='true'
-                                offset={-20}
                                 activeClass="active"
                                 className="link"
                             >

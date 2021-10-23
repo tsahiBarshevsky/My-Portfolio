@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-// import AboutSection from './components/About';
-import './styles.sass';
+import AboutSection from './components/About';
 import ProjectsSection from './components/Projects';
-import Project from './components/Project';
-import Footer from './components/Footer';
 import ContactSection from './components/Contact';
+import Footer from './components/Footer';
+import Project from './components/Project';
+import './styles.sass';
 
 const App = () => {
     return (
@@ -16,7 +16,7 @@ const App = () => {
                 <Route exact path="/">
                     <Navbar />
                     <Hero />
-                    {/* <AboutSection /> */}
+                    <AboutSection />
                     <ProjectsSection />
                     <ContactSection />
                     <Footer />
