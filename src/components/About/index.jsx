@@ -19,7 +19,7 @@ const AboutSection = () => {
     const classes = useStyles();
 
     return (
-        <div id="about-section">
+        <div id="about">
             <div className="title-container">
                 <h1 className="title">About Me</h1>
                 <div className="divider" />

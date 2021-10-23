@@ -8,6 +8,7 @@ import Footer from '../Footer';
 import clsx from 'clsx';
 import useStyles from './styles';
 import './styles.sass';
+import Navbar from '../Navbar';
 
 const Project = (props) => {
     const title = props.match.params.title;
@@ -24,6 +25,7 @@ const Project = (props) => {
 
     return project !== undefined && (
         <>
+            <Navbar />
             <div className="project-container">
                 <div className="header">
                     <Typography variant="h2" className={classes.title}>{project.title}</Typography>
