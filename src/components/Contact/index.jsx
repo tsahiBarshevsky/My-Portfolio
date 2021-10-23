@@ -8,14 +8,6 @@ import { makeStyles } from '@mui/styles';
 import './styles.sass';
 
 const useStyles = makeStyles({
-    title:
-    {
-        fontFamily: `'Eurostile', sans-serif`,
-        color: '#cacaca',
-        textShadow: '1px 2px 1px #000000CC',
-        letterSpacing: 1.5,
-        lineHeight: 1
-    },
     input:
     {
         "&&": {
