@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
-import { MdLocationOn } from 'react-icons/md';
 import emailjs from 'emailjs-com';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,6 +10,7 @@ import './styles.sass';
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const classes = useStyles();
 
@@ -28,6 +28,7 @@ const Contact = () => {
         e.target.reset();
         setName('');
         setEmail('');
+        setSubject('');
         setMessage('');
     }
 
@@ -36,6 +37,10 @@ const Contact = () => {
             <div className="title-container">
                 <h1 className="title">Contact</h1>
                 <div className="divider" />
+            </div>
+            <div style={{ marginBottom: 40 }}>
+                <h2>Have a question or want to work together?</h2>
+                <h2>Send me a message!</h2>
             </div>
             <form className="contact-form" onSubmit={sendEmail}>
                 <TextField
@@ -58,8 +63,24 @@ const Contact = () => {
                     required
                     autoComplete="off"
                     name="email"
+                    type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    InputProps={{
+                        disableUnderline: true,
+                        classes: { input: classes.placeholder },
+                        style: { fontFamily: 'Glory', padding: '5px 15px' }
+                    }}
+                    className={classes.input}
+                    variant='standard'
+                />
+                <TextField
+                    placeholder="Subject"
+                    required
+                    autoComplete="off"
+                    name="subject"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                     InputProps={{
                         disableUnderline: true,
                         classes: { input: classes.placeholder },
