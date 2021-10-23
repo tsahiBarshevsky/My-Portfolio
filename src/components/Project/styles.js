@@ -32,7 +32,6 @@ export default makeStyles(() => ({
     {
         width: '50%',
         backgroundColor: '#7c7c7c',
-        margin: '10px 0 20px'
     },
     website:
     {
