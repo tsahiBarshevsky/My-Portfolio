@@ -1,7 +1,8 @@
 import React from 'react';
 import { IconButton } from '@mui/material';
-import { FaFacebookF, FaLinkedinIn, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import { SiGmail } from 'react-icons/si';
 import { animateScroll as scroll } from 'react-scroll';
 import './styles.sass';
 
@@ -34,7 +35,7 @@ const Footer = () => {
                         className="link"
                         title="Tsahi's email"
                     >
-                        <FaGoogle className="icon" />
+                        <SiGmail className="icon" />
                     </a>
                     <a
                         href="https://www.facebook.com/tsahi.barshavsky/"

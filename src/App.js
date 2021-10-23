@@ -7,6 +7,7 @@ import './styles.sass';
 import ProjectsSection from './components/Projects';
 import Project from './components/Project';
 import Footer from './components/Footer';
+import Contact from './components/Contact/indes';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                     <Hero />
                     {/* <AboutSection /> */}
                     <ProjectsSection />
+                    <Contact />
                     <Footer />
                 </Route>
                 <Route exact path="/:title" component={Project} />
