@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     copyright: {
         '&&': {
             fontFamily: `'Josefin Sans', sasn-serif`,
-            color: '#8a96b3'
+            color: '#8a96b3',
+            fontWeight: 'bold'
         }
     }
 });
