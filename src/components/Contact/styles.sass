@@ -13,13 +13,13 @@
     cursor: default
 
     @media screen and ( max-width: $md )
-        padding: 50px 100px 20px
+        padding: 70px 100px 20px
 
     @media screen and ( max-width: $sm )
-        padding: 50px 50px 20px
+        padding: 70px 100px 20px
 
     @media screen and ( max-width: $xs )
-        padding: 50px 20px 20px
+        padding: 70px 30px 20px
 
     .title-container
         display: flex
@@ -46,10 +46,55 @@
             box-shadow: 1px 2px 1px #000000CC
             border-radius: 10px
 
-    .contact-form
+    .contact-card
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        width: 100%
-        margin: 10px 0
+        background-color: $secondary
+        width: 200px
+        height: 195px
+        border-radius: 15px
+        padding: 15px
+        margin: 10px
+        z-index: 2
+
+        .icon-wrapper
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 80px
+            height: 80px
+            background: linear-gradient(132deg, rgba(151,182,255,1) 8%, rgba(98,138,235,1) 70%)
+            border-radius: 50%
+            margin-bottom: 30px
+
+            .icon
+                color: white
+
+            .fs30
+                font-size: 30px
+
+            .fs40
+                font-size: 40px
+
+        .link
+            text-decoration: none
+            color: white
+            font-size: 16px
+            font-family: 'Josefin Sans', sans-serif
+            margin-top: 5px
+
+            // &:hover
+            //     color: $glow-color
+
+    .contact-form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        width: fit-content
+        margin: 40px 0 10px
+
+        @media screen and ( max-width: $xs )
+            width: 100%

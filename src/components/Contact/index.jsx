@@ -1,36 +1,57 @@
 import React, { useState } from 'react';
-import { Button, TextField } from '@mui/material';
+import { Button, Grid, Input, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { MdLocationOn } from 'react-icons/md';
+import { BiEnvelopeOpen } from 'react-icons/bi';
+import { FaPhoneAlt } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { makeStyles } from '@mui/styles';
+import { contact } from '../../data/texts';
 import './styles.sass';
 
 const useStyles = makeStyles({
+    about: {
+        "&&": {
+            fontFamily: `'Glory', sasn-serif`,
+            fontWeight: 'bold',
+            marginBottom: 30
+        }
+    },
+    cardTitle: {
+        "&&": {
+            fontFamily: `'Josefin Sans', sasn-serif`,
+            fontWeight: 'bold',
+            color: 'white',
+            letterSpacing: 1,
+            marginBottom: -5
+        }
+    },
+    cardSubtitle: {
+        "&&": {
+            fontFamily: `'Josefin Sans', sasn-serif`,
+            color: 'white'
+        }
+    },
+    item: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     input:
     {
         "&&": {
+            color: 'white',
             backgroundColor: '#2e3445',
-            marginBottom: 15,
+            fontFamily: 'Glory',
+            padding: '5px 25px',
+            marginBottom: 20,
             borderRadius: 10,
             width: 450,
-            '@media (max-width: 550px)':
+            '@media (max-width: 600px)':
             {
                 width: '100%'
-            }
-        }
-    },
-    message: {
-        height: 185
-    },
-    placeholder:
-    {
-        '&&': {
-            color: 'white',
-            "&::placeholder":
-            {
-                color: "white",
             }
         }
     },
@@ -38,17 +59,18 @@ const useStyles = makeStyles({
     {
         '&&': {
             fontFamily: `'Glory', sans-serif`,
-            backgroundColor: '#3498db',
+            backgroundColor: '#628aeb',
             textTransform: 'capitalize',
+            alignSelf: 'center',
             color: 'white',
             marginTop: 10,
             borderRadius: 25,
-            width: 100,
+            width: 120,
             height: 37,
             fontSize: 20,
             '&:hover':
             {
-                backgroundColor: '#3498dbCC'
+                backgroundColor: '#628aebCC'
             }
 
         }
@@ -69,16 +91,16 @@ const ContactSection = () => {
             .then((result) => {
                 console.log(result.text);
                 toast.success('Your message sent successfully');
+                e.target.reset();
+                setName('');
+                setEmail('');
+                setSubject('');
+                setMessage('');
             }, (error) => {
                 console.log(error.text);
                 toast.error('Oops... an unexpected error occurred');
             }
             );
-        e.target.reset();
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
     }
 
     return (
@@ -87,73 +109,117 @@ const ContactSection = () => {
                 <h1 className="title">Contact</h1>
                 <div className="divider" />
             </div>
-            <div style={{ marginBottom: 40 }}>
+            <Typography variant="h5" className={classes.about}>{contact}</Typography>
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <MdLocationOn className="icon fs40" />
+                        </div>
+                        <Typography
+                            variant="h5"
+                            className={classes.cardTitle}
+                        >
+                            Location
+                        </Typography>
+                        <Typography
+                            variant="subtitle1"
+                            className={classes.cardSubtitle}
+                        >
+                            Bat Yam, Israel
+                        </Typography>
+                    </div>
+                </Grid>
+                <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <BiEnvelopeOpen className="icon fs40" />
+                        </div>
+                        <Typography
+                            variant="h5"
+                            className={classes.cardTitle}
+                        >
+                            Email
+                        </Typography>
+                        <a
+                            href="mailto:tsahi.13@gmail.com"
+                            className="link"
+                        >
+                            tsahi.13@gmail.com
+                        </a>
+                    </div>
+                </Grid>
+                <Grid item xs="auto" sm={12} md={12} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <FaPhoneAlt className="icon fs30" />
+                        </div>
+                        <Typography variant="h5" className={classes.cardTitle}>Phone</Typography>
+                        <a
+                            href="tel:+972526547888"
+                            className="link"
+                        >
+                            0526547888
+                        </a>
+                    </div>
+                </Grid>
+            </Grid>
+            {/* <div style={{ marginBottom: 40 }}>
                 <h2>Have a question or want to work together?</h2>
                 <h2>Send me a message!</h2>
-            </div>
+            </div> */}
             <form className="contact-form" onSubmit={sendEmail}>
-                <TextField
-                    className={classes.input}
-                    placeholder="Name"
-                    required
-                    autoComplete="off"
+                <Input
                     name="name"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    InputProps={{
-                        disableUnderline: true,
-                        classes: { input: classes.placeholder },
-                        style: { fontFamily: 'Glory', padding: '5px 15px' }
-                    }}
-                    variant='standard'
-                />
-                <TextField
-                    placeholder="Email"
-                    required
-                    autoComplete="off"
-                    name="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    InputProps={{
-                        disableUnderline: true,
-                        classes: { input: classes.placeholder },
-                        style: { fontFamily: 'Glory', padding: '5px 15px' }
-                    }}
+                    placeholder="Name *"
+                    disableUnderline
                     className={classes.input}
-                    variant='standard'
-                />
-                <TextField
-                    placeholder="Subject"
                     required
                     autoComplete="off"
+                    onChange={(e) => setName(e.target.value)}
+                    variant='standard'
+                />
+                <Input
+                    name="email"
+                    value={email}
+                    placeholder="Email *"
+                    type="email"
+                    disableUnderline
+                    className={classes.input}
+                    required
+                    autoComplete="off"
+                    onChange={(e) => setEmail(e.target.value)}
+                    variant='standard'
+                />
+                <Input
                     name="subject"
                     value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    InputProps={{
-                        disableUnderline: true,
-                        classes: { input: classes.placeholder },
-                        style: { fontFamily: 'Glory', padding: '5px 15px' }
-                    }}
+                    placeholder="Subject *"
+                    disableUnderline
                     className={classes.input}
+                    required
+                    autoComplete="off"
+                    onChange={(e) => setSubject(e.target.value)}
                     variant='standard'
                 />
-                <TextField
-                    placeholder="Message"
-                    required
-                    multiline
-                    minRows={1}
-                    maxRows={8}
-                    autoComplete="off"
+                <Input
                     name="message"
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    InputProps={{
-                        disableUnderline: true,
-                        classes: { input: classes.placeholder },
-                        style: { fontFamily: 'Glory', padding: '5px 15px' }
-                    }}
+                    placeholder="Your message"
+                    disableUnderline
                     className={clsx(classes.input, classes.message)}
+                    required
+                    multiline
+                    minRows={7}
+                    maxRows={7}
+                    autoComplete="off"
+                    onChange={(e) => setMessage(e.target.value)}
                     variant='standard'
                 />
                 <Button

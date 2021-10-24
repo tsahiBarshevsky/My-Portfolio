@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -14,8 +13,7 @@ import './styles.sass';
 
 const App = () => {
 
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('sm'));
+    const matches = useMediaQuery('@media (max-width: 625px)');
 
     return (
         <Router>

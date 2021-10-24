@@ -33,7 +33,7 @@ const useStyles = makeStyles({
             fontFamily: `'Glory', sans-serif`,
             backgroundColor: 'transparent',
             textTransform: 'capitalize',
-            border: '2px solid #5ef0cf',
+            border: '2px solid #628aeb',
             color: 'white',
             width: 90,
             height: 35,
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
             borderRadius: 10,
             '&:hover':
             {
-                backgroundColor: '#5ef0cf33'
+                backgroundColor: '#628aeb33'
             }
 
         }
