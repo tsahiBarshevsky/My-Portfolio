@@ -1,63 +1,63 @@
+import { Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
-import { IconButton } from '@mui/material';
-import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { AiOutlineArrowUp } from 'react-icons/ai';
-import { SiGmail } from 'react-icons/si';
-import { animateScroll as scroll } from 'react-scroll';
+import { FiGithub, FiLinkedin, FiMail, FiFacebook } from 'react-icons/fi';
 import './styles.sass';
+
+const useStyles = makeStyles({
+    copyright: {
+        '&&': {
+            fontFamily: `'Josefin Sans', sasn-serif`,
+            color: '#8a96b3'
+        }
+    }
+});
 
 const Footer = () => {
 
+    const classes = useStyles();
+
     return (
         <footer>
-            <div id="oval">
-                <div className="links">
-                    <a
-                        href="https://www.linkedin.com/in/tsahi-barshavsky-frontend-developer/"
-                        target="_blank"
-                        rel="noreferrer"
-                        title="TsahiB on Linkedin"
-                        className="link"
-                    >
-                        <FaLinkedinIn className="icon" />
-                    </a>
-                    <a
-                        href="https://github.com/tsahiBarshevsky"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="link"
-                        title="TsahiB on GitHub"
-                    >
-                        <FaGithub className="icon" />
-                    </a>
-                    <a
-                        href="mailto:tsahi.13@gmail.com"
-                        className="link"
-                        title="Tsahi's email"
-                    >
-                        <SiGmail className="icon" />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/tsahi.barshavsky/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="link"
-                        title="TsahiB on Facebook"
-                    >
-                        <FaFacebookF className="icon" />
-                    </a>
-                </div>
-                <p className="copyright">
-                    Tsahi Barshavsky &copy; {new Date().getFullYear()}
-                </p>
-                <IconButton
-                    className="button"
-                    onClick={() => scroll.scrollToTop()}
-                    disableRipple
+            <div className="links">
+                <a
+                    href="https://github.com/tsahiBarshevsky"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                    title="TsahiB on GitHub"
                 >
-                    <AiOutlineArrowUp className="icon" />
-                </IconButton>
+                    <FiGithub className="icon" />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/tsahi-barshavsky-frontend-developer/"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="TsahiB on Linkedin"
+                    className="link"
+                >
+                    <FiLinkedin className="icon" />
+                </a>
+                <a
+                    href="mailto:tsahi.13@gmail.com"
+                    className="link"
+                    title="Tsahi's email"
+                >
+                    <FiMail className="icon" />
+                </a>
+                <a
+                    href="https://www.facebook.com/tsahi.barshavsky/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                    title="TsahiB on Facebook"
+                >
+                    <FiFacebook className="icon" />
+                </a>
             </div>
+            <Typography variant="h6" className={classes.copyright}>
+                Tsahi Barshavsky &copy; {new Date().getFullYear()}
+            </Typography>
         </footer>
     )
 }

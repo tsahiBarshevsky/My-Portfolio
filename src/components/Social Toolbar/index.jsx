@@ -11,7 +11,7 @@ const SocialToolbar = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="TsahiB on GitHub"
-                    className="link"
+                    className="link hover-social"
                 >
                     <FiGithub style={{ fontSize: 20 }} />
                 </a>
@@ -20,7 +20,7 @@ const SocialToolbar = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="TsahiB on Linkedin"
-                    className="link"
+                    className="link hover-social"
                 >
                     <FiLinkedin style={{ fontSize: 20 }} />
                 </a>
@@ -29,14 +29,17 @@ const SocialToolbar = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="TsahiB on Facebook"
-                    className="link"
+                    className="link hover-social"
                 >
                     <FiFacebook style={{ fontSize: 20 }} />
                 </a>
                 <div className="vertical-line" />
             </div>
             <div className="social">
-                <a href="mailto:tsahi.13@gmail.com" className="link vertical-align">
+                <a
+                    href="mailto:tsahi.13@gmail.com"
+                    className="link hover-mail vertical-align"
+                >
                     tsahi.13@gmail.com
                 </a>
                 <div className="vertical-line" />

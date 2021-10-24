@@ -8,9 +8,14 @@
     align-items: flex-end
     position: fixed
     bottom: 0
-    z-index: 20
     color: white
     padding: 0 40px
+
+    @media screen and ( max-width: 1330px )
+        padding: 0 10px
+
+    @media screen and ( max-width: $md )
+        padding: 0 40px
 
     .social
         display: flex
@@ -20,18 +25,24 @@
 
         .link
             text-decoration: none
+            font-family: 'Josefin sans', sans-serif
             margin: 10px 0
             color: white
             transition: all 0.2s ease-in-out
 
-            &:hover
-                transform: translateY(-10%)
+        .hover-social:hover
+            color: $glow-color
+            transform: translateY(-15%)
+
+        .hover-mail:hover
+            color: $glow-color
+            transform: translateY(-2%)
 
         .vertical-align
             writing-mode: tb-rl
 
         .vertical-line
             height: 90px
-            width: 2px
+            width: 1px
             background-color: white
             margin-top: 5px
