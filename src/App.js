@@ -7,6 +7,7 @@ import ProjectsSection from './components/Projects';
 import ContactSection from './components/Contact';
 import Footer from './components/Footer';
 import Project from './components/Project';
+import SocialToolbar from './components/Social Toolbar';
 import './styles.sass';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/">
                     <Navbar />
+                    <SocialToolbar />
                     <Hero />
                     <AboutSection />
                     <ProjectsSection />
