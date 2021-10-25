@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Navbar from './components/Navbar';
@@ -14,6 +14,10 @@ import './styles.sass';
 const App = () => {
 
     const matches = useMediaQuery('@media (max-width: 625px)');
+
+    useEffect(() => {
+        document.title = "Tsahi Barshavsky | FrontEnd Developer";
+    }, []);
 
     return (
         <Router>

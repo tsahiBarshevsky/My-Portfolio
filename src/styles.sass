@@ -1,7 +1,24 @@
 @import '_variables'
 
+@font-face
+    font-family: "Jenthill"
+    src: local("Jenthill"), url(./fonts/Jenthill-Light.otf) format("truetype")
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     font-family: 'Glory', sans-serif
+
+::-webkit-scrollbar
+    width: 7px
+    height: 7px
+
+::-webkit-scrollbar-thumb
+    background: #6a6a6a
+    border-radius: 0px
+
+::-webkit-scrollbar-track
+    background: $primary
+    border-radius: 0px
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0
