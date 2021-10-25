@@ -159,7 +159,7 @@ const ContactSection = () => {
                         <div className="icon-wrapper">
                             <FaWhatsapp className="icon" />
                         </div>
-                        <Typography variant="h5" className={classes.cardTitle}>Phone</Typography>
+                        <Typography variant="h5" className={classes.cardTitle}>WhatsApp</Typography>
                         <a
                             href="https://api.whatsapp.com/send?phone=+972526547888"
                             target="_blank"

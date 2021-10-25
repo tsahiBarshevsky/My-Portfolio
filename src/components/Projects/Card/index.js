@@ -17,25 +17,8 @@ const useStyles = makeStyles({
     subtitle: {
         '&&': {
             fontFamily: `'Glory', sans-serif`,
-            color: 'green',
+            color: '#628aeb ',
             fontWeight: 'noraml'
-        }
-    },
-    button: {
-        '&&': {
-            fontFamily: `'Glory', sans-serif`,
-            textTransform: 'capitalize',
-            backgroundColor: 'transparent',
-            border: '2px solid #2e7d32',
-            color: '#2e7d32',
-            borderRadius: 25,
-            fontSize: 18,
-            width: 145,
-            height: 40,
-            '&:hover': {
-                backgroundColor: '#2e7d32',
-                color: 'white'
-            }
         }
     }
 });
@@ -60,9 +43,9 @@ const Card = ({ project, identifier }) => {
                 <Button
                     component={Link}
                     to={{ pathname: `/${identifier}` }}
-                    variant="contained"
+                    variant="outlined"
                     endIcon={<TiArrowRight />}
-                    className={classes.button}
+                    className="button btn-color btn-l-r"
                 >
                     Read more
                 </Button>
