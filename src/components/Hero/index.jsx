@@ -6,7 +6,7 @@ const Hero = () => {
 
     return (
         <div className="hero-container" id="home">
-            <div id="rectangle" />
+            {/* <div id="rectangle" />
             <div id="oval">
                 <h1>Tsahi Barshavsky</h1>
                 <h3>a Frontend web developer</h3>
@@ -34,7 +34,7 @@ const Hero = () => {
                     mouth="openSmile"
                     skinTone="light"
                 />
-            </div>
+            </div> */}
         </div>
     )
 }

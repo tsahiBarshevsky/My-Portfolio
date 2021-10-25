@@ -42,6 +42,7 @@ const useStyles = makeStyles({
     input:
     {
         "&&": {
+            zIndex: 10,
             color: 'white',
             backgroundColor: '#2e3445',
             fontFamily: 'Glory',
@@ -53,26 +54,6 @@ const useStyles = makeStyles({
             {
                 width: '100%'
             }
-        }
-    },
-    submit:
-    {
-        '&&': {
-            fontFamily: `'Glory', sans-serif`,
-            backgroundColor: '#628aeb',
-            textTransform: 'capitalize',
-            alignSelf: 'center',
-            color: 'white',
-            marginTop: 10,
-            borderRadius: 25,
-            width: 120,
-            height: 37,
-            fontSize: 20,
-            '&:hover':
-            {
-                backgroundColor: '#628aebCC'
-            }
-
         }
     }
 });
@@ -221,11 +202,11 @@ const ContactSection = () => {
                     variant='standard'
                 />
                 <Button
-                    variant="contained"
-                    className={classes.submit}
+                    variant="outlined"
+                    className="button btn-color btn-l-r"
                     type="submit"
                 >
-                    Send
+                    Send!
                 </Button>
             </form>
             <ToastContainer

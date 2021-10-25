@@ -90,3 +90,47 @@
 
         @media screen and ( max-width: $xs )
             width: 100%
+
+        .button
+            font-family: 'Glory', sans-serif
+            border-radius: 10px
+            text-decoration: none
+            text-transform: capitalize
+            position: relative
+            align-self: center
+            font-size: 20px
+            width: 120px
+            height: 37px
+            border: 2px solid white
+            z-index: 20
+            transition: all 0.35s cubic-bezier(1.000, 0.500, 0.000, 1.000)
+
+            &:hover
+                color: white
+
+            &::before, &::after
+                content: ''
+                position: absolute
+                z-index: -1
+                border-radius: 7px
+
+                transition: all 0.35s cubic-bezier(1.000, 0.500, 0.000, 1.000)
+
+        .btn-color
+            border-color: $glow-color
+            color: $glow-color
+
+            &::before,
+            &::after
+                background: $glow-color
+
+        .btn-l-r::after
+            height: 100%
+            width: 0
+            top: 0
+
+        .btn-l-r:hover::after
+            width: 100%
+
+        .btn-l-r::after
+            left: 0
