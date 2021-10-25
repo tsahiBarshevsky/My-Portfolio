@@ -9,7 +9,8 @@ const useStyles = makeStyles({
         '&&': {
             fontFamily: `'Josefin Sans', sasn-serif`,
             color: '#8a96b3',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            position: 'relative'
         }
     }
 });

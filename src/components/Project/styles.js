@@ -10,7 +10,15 @@ export const useStyles = makeStyles({
             textShadow: '1px 2px 1px #000000CC',
             fontWeight: 'bold',
             letterSpacing: 1.5,
-            lineHeight: 1
+            lineHeight: 1,
+            marginBottom: 0
+        }
+    },
+    date: {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            color: '#cacaca',
+            lineHeight: 1,
         }
     },
     subtitle:

@@ -34,7 +34,7 @@ const Project = (props) => {
             <div className="project-container">
                 <div className="header">
                     <Typography variant="h2" className={classes.title}>{project.title}</Typography>
-                    <Typography variant="subtitle1" className={clsx(classes.text, classes.ml12)}>
+                    <Typography variant="subtitle1" className={clsx(classes.date, classes.ml12)}>
                         {project.date.toLocaleDateString("en-GB")}
                     </Typography>
                 </div>
