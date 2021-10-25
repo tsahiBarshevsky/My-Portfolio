@@ -9,18 +9,20 @@ export let projects = new Map()
             image: 'https://lh3.googleusercontent.com/QynzJ6rPojT59Dni1j24qHBum94GOTM-MUxJOMeW1PlhxQWSCxH5kWVA9CfPU-TXHmXsTJvDYPJ3FqCr2cLKbHYdLJhElhz3jc8NXmyFQVnyCeoYA30lFhLSZsd06EJHqUu4Z6RZkw=w2400',
             stack: [
                 'React Native (Expo)',
-                'React navigation',
+                'React Navigation',
                 'Redux',
                 'React Redux',
                 'JavaScript',
                 'AsyncStorage',
-                'Figma',
                 'Node.js',
                 'ExpressJS',
                 'MongoDB',
                 'Firebase',
-                'Postman',
                 'Top npm packages:', ['moment-js', 'react-native-calendars', 'react-native-toast-message', 'expo-image-picker', 'mongoose']
+            ],
+            utilities: [
+                'Figma',
+                'Postman',
             ],
             description:
                 `I'm using some ointments because of my allergy, and all of them need to be thrown away after a certain amount of time since opening. ` +
