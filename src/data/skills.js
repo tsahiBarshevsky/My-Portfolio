@@ -1,5 +1,5 @@
 export const skills = [
-    { type: "React", level: 85 },
+    { type: "React", level: 80 },
     { type: "Redux", level: 70 },
     { type: "JavaScript", level: 80 },
     { type: "CSS", level: 90 },

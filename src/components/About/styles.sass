@@ -6,11 +6,14 @@
     justify-content: flex-start
     align-items: center
     width: 100%
-    padding: 70px 25px 120px
+    padding: 70px 120px 80px
     text-align: center
     color: $text-primary
     background-color: $primary
     cursor: default
+
+    @media screen and ( max-width: $xs )
+        padding: 70px 30px 80px
 
     .title-container
         display: flex
@@ -37,35 +40,66 @@
             box-shadow: 1px 2px 1px #000000CC
             border-radius: 10px
 
+    .about-text,
+    .about-skills
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+
+    .p30
+        padding: 0 30px
+
+        // @media screen and ( max-width: 1263px )
+        //     padding: 0 0 20px
+
+    .p40
+        padding: 0 40px
+
+        // @media screen and ( max-width: 1263px )
+        //     padding: 0
+
+    .skillbar
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        width: 100%
+
+        .type
+            display: flex
+            align-items: center
+            margin-bottom: -10px
+
     .grid-container
         width: 80%
 
         @media screen and ( max-width: $md )
             width: 100%
 
-    .about
-        width: 80%
+    // .about
+    //     width: 80%
 
-        .profile-image
-            width: 200px
-            height: 200px
-            border-radius: 50%
-            object-fit: cover
-            object-position: center center
+    //     .profile-image
+    //         width: 200px
+    //         height: 200px
+    //         border-radius: 50%
+    //         object-fit: cover
+    //         object-position: center center
 
-        .about-text
-            font-size: 20px
+    //     .about-text
+    //         font-size: 20px
 
-    .skills
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        align-items: flex-start
-        width: fit-content
+    // .skills
+    //     display: flex
+    //     flex-direction: column
+    //     justify-content: flex-start
+    //     align-items: flex-start
+    //     width: fit-content
 
-    .subtitle
-        text-shadow: 1px 2px 1px #000000CC
-        margin-bottom: 15px
+    // .subtitle
+    //     text-shadow: 1px 2px 1px #000000CC
+    //     margin-bottom: 15px
 
     .contact-card
         display: flex

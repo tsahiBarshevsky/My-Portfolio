@@ -3,11 +3,32 @@ import { Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { BiCodeAlt } from 'react-icons/bi';
 import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
-// import image from '../../assets/profile.jpg';
-import { loremipsum } from '../../data/texts';
+import { Icon } from '@iconify/react';
+import ProgressBar from 'react-animated-progress-bar';
+import { loremipsum, myStory } from '../../data/texts';
 import './styles.sass';
+import { skills } from '../../data/skills';
 
 const useStyles = makeStyles(() => ({
+    aboutTitle: {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            fontWeight: 'bold',
+            marginBottom: 15
+        }
+    },
+    paragraph: {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            textAlign: 'start'
+        }
+    },
+    type: {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            marginLeft: 10,
+        }
+    },
     subtitle: {
         '&&': {
             fontFamily: `'Josefin Sans', sans-serif`,
@@ -16,7 +37,10 @@ const useStyles = makeStyles(() => ({
         }
     },
     grid: {
-        padding: '0 30px'
+        padding: '0 130px',
+        // '@media (max-width: 1400px)': {
+        //     padding: 0
+        // }
     },
     item: {
         display: 'flex',
@@ -46,45 +70,102 @@ const AboutSection = () => {
 
     const classes = useStyles();
 
+    const renderIcon = (type) => {
+        switch (type) {
+            case 'React':
+            case 'React Native':
+                return <Icon icon="vscode-icons:file-type-reactjs" width="30" height="30" />;
+            case 'Redux':
+                return <Icon icon="logos:redux" width="30" height="30" />;
+            case 'JavaScript':
+                return <Icon icon="logos:javascript" width="25" height="25" />;
+            case 'CSS':
+                return <Icon icon="vscode-icons:file-type-css" width="30" height="30" />;
+            case 'SASS':
+                return <Icon icon="logos:sass" width="30" height="30" />;
+            case 'Material-UI':
+                return <Icon icon="logos:material-ui" width="30" height="30" />;
+            case 'Node.js':
+                return <Icon icon="vscode-icons:file-type-node" width="30" height="30" />;
+            case 'Firebase':
+                return <Icon icon="logos:firebase" width="30" height="30" />
+            default:
+                return null;
+        }
+    }
+
     return (
         <div id="about">
             <div className="title-container">
                 <h1 className="title">About Me</h1>
                 <div className="divider" />
             </div>
-            {/* <div className="grid-container">
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Grid item xs={12} sm={12} md={12} lg={6} xl={6} className={classes.item}>
-                        <div className="about">
-                            <img src={image} alt="Oops! It was supposed to be me" className="profile-image" />
-                            <h1 className="subtitle">How am I?</h1>
-                            <p className="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis, ipsum sed posuere sollicitudin, orci augue egestas dui, vitae consectetur magna mauris vitae massa. Praesent ullamcorper vitae nisi id ullamcorper. Quisque urna velit, auctor at diam fringilla, congue feugiat est. Integer ante nibh, dictum tincidunt euismod et, accumsan a enim. Sed fermentum nec purus at posuere. Maecenas scelerisque vestibulum faucibus. Nulla tristique vestibulum velit vel dictum.</p>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={6} xl={6} className={classes.item}>
-                        <div className="skills">
-                            <h1 className="subtitle">Top Skills</h1>
-                            {skills.map((skill, index) => {
-                                return (
-                                    <SkillBar key={index} type={skill.type} level={skill.level} />
-                                )
-                            })}
-                        </div>
-                    </Grid>
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="flex-start"
+                className={classes.grid}
+                style={{ marginBottom: 50 }}
+            >
+                <Grid item xs={12} sm={12} md={12} lg={6} xl={5}>
+                    <div className="about-text p30">
+                        <Typography variant="h5" className={classes.aboutTitle}>My Story</Typography>
+                        {myStory.split('\n').map((paragraph, index) => {
+                            return (
+                                <Typography
+                                    variant="h6"
+                                    className={classes.paragraph}
+                                    paragraph
+                                    key={index}
+                                >
+                                    {paragraph}
+                                </Typography>
+                            )
+                        })}
+                    </div>
                 </Grid>
-            </div> */}
+                <Grid item xs={12} sm={12} md={12} lg={6} xl={7}>
+                    <div className="about-skills p40">
+                        <Typography variant="h5" className={classes.aboutTitle}>My Top Skills</Typography>
+                        {skills.map((skill, index) => {
+                            return (
+                                <div className="skillbar" key={index}>
+                                    <div className="type">
+                                        {renderIcon(skill.type)}
+                                        <Typography variant="h6" className={classes.type}>
+                                            {skill.type}
+                                        </Typography>
+                                    </div>
+                                    <ProgressBar
+                                        width="100%"
+                                        height="10px"
+                                        rect
+                                        fontColor="white"
+                                        percentage={skill.level}
+                                        rectBorderRadius="20px"
+                                        trackPathColor="transparent"
+                                        bgColor="#333333"
+                                        trackBorderColor="transparent"
+                                        defColor={{
+                                            fair: '#628aeb',
+                                            good: '#628aeb',
+                                            excellent: '#628aeb',
+                                            poor: '#628aeb',
+                                        }}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </Grid>
+            </Grid>
             <Typography variant="h5" className={classes.subtitle}>Things I love</Typography>
             <Grid
                 container
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                className={classes.grid}
             >
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
                     <div className="contact-card">
