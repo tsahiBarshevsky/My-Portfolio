@@ -1,16 +1,44 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import image from '../../assets/profile.jpg';
-import { skills } from '../../data/skills';
-import SkillBar from './SkillBar';
+import { BiCodeAlt } from 'react-icons/bi';
+import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
+// import image from '../../assets/profile.jpg';
+import { loremipsum } from '../../data/texts';
 import './styles.sass';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
+    subtitle: {
+        '&&': {
+            fontFamily: `'Josefin Sans', sans-serif`,
+            fontWeight: 'bold',
+            marginBottom: 20
+        }
+    },
+    grid: {
+        padding: '0 30px'
+    },
     item: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
+    },
+    cardTitle: {
+        "&&": {
+            fontFamily: `'Josefin Sans', sasn-serif`,
+            fontWeight: 'bold',
+            color: 'white',
+            letterSpacing: 1,
+            margin: '10px 0'
+        }
+    },
+    cardSubtitle: {
+        "&&": {
+            fontFamily: `'Glory', sasn-serif`,
+            color: 'white',
+            lineHeight: 1.2,
+            fontSize: 18
+        }
     }
 }));
 
@@ -24,7 +52,7 @@ const AboutSection = () => {
                 <h1 className="title">About Me</h1>
                 <div className="divider" />
             </div>
-            <div className="grid-container">
+            {/* <div className="grid-container">
                 <Grid
                     container
                     direction="row"
@@ -49,7 +77,77 @@ const AboutSection = () => {
                         </div>
                     </Grid>
                 </Grid>
-            </div>
+            </div> */}
+            <Typography variant="h5" className={classes.subtitle}>Things I love</Typography>
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                className={classes.grid}
+            >
+                <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <BiCodeAlt className="icon" />
+                        </div>
+                        <Typography
+                            variant="h5"
+                            className={classes.cardTitle}
+                        >
+                            FrontEnd
+                        </Typography>
+                        <Typography
+                            variant="subtitle1"
+                            className={classes.cardSubtitle}
+                        >
+                            {loremipsum}
+                        </Typography>
+                    </div>
+                </Grid>
+                <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <FaLaptopCode className="icon" />
+                        </div>
+                        <Typography
+                            variant="h5"
+                            className={classes.cardTitle}
+                        >
+                            Webs and apps
+                        </Typography>
+                        <Typography
+                            variant="subtitle1"
+                            className={classes.cardSubtitle}
+                        >
+                            {loremipsum}
+                        </Typography>
+                    </div>
+                </Grid>
+                <Grid item xs="auto" sm={12} md={12} lg={4} xl={4} className={classes.item}>
+                    <div className="contact-card">
+                        <div className="icon-wrapper">
+                            <FaPaintBrush className="icon" />
+                        </div>
+                        <Typography
+                            variant="h5"
+                            className={classes.cardTitle}
+                        >
+                            Creative Coding
+                        </Typography>
+                        <Typography
+                            variant="subtitle1"
+                            className={classes.cardSubtitle}
+                        >
+                            {loremipsum}
+                        </Typography>
+                    </div>
+                </Grid>
+            </Grid>
+
+
+
+
         </div>
     )
 }

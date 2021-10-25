@@ -3,7 +3,7 @@ import { Button, Grid, Input, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { MdLocationOn } from 'react-icons/md';
 import { BiEnvelopeOpen } from 'react-icons/bi';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
@@ -119,7 +119,7 @@ const ContactSection = () => {
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
                     <div className="contact-card">
                         <div className="icon-wrapper">
-                            <MdLocationOn className="icon fs40" />
+                            <MdLocationOn className="icon" />
                         </div>
                         <Typography
                             variant="h5"
@@ -138,7 +138,7 @@ const ContactSection = () => {
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
                     <div className="contact-card">
                         <div className="icon-wrapper">
-                            <BiEnvelopeOpen className="icon fs40" />
+                            <BiEnvelopeOpen className="icon" />
                         </div>
                         <Typography
                             variant="h5"
@@ -157,22 +157,20 @@ const ContactSection = () => {
                 <Grid item xs="auto" sm={12} md={12} lg={4} xl={4} className={classes.item}>
                     <div className="contact-card">
                         <div className="icon-wrapper">
-                            <FaPhoneAlt className="icon fs30" />
+                            <FaWhatsapp className="icon" />
                         </div>
                         <Typography variant="h5" className={classes.cardTitle}>Phone</Typography>
                         <a
-                            href="tel:+972526547888"
+                            href="https://api.whatsapp.com/send?phone=+972526547888"
+                            target="_blank"
+                            rel="noreferrer"
                             className="link"
                         >
-                            0526547888
+                            Send me a message
                         </a>
                     </div>
                 </Grid>
             </Grid>
-            {/* <div style={{ marginBottom: 40 }}>
-                <h2>Have a question or want to work together?</h2>
-                <h2>Send me a message!</h2>
-            </div> */}
             <form className="contact-form" onSubmit={sendEmail}>
                 <Input
                     name="name"

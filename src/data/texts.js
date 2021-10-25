@@ -1,1 +1,2 @@
 export const contact = "Want to say hello? Got something you'd like to ask? Want to hire me? Contact me through these channels or the form below.";
+export const loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nulla lectus, semper nec fermentum placerat, consequat sit amet tellus. Ut vulputate mauris est, vel porttitor.";

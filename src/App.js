@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-// import AboutSection from './components/About';
+import AboutSection from './components/About';
 import ProjectsSection from './components/Projects';
 import ContactSection from './components/Contact';
 import Footer from './components/Footer';
@@ -22,7 +22,7 @@ const App = () => {
                     <Navbar />
                     {!matches && <SocialToolbar />}
                     <Hero />
-                    {/* <AboutSection /> */}
+                    <AboutSection />
                     <ProjectsSection />
                     <ContactSection />
                     <Footer />
