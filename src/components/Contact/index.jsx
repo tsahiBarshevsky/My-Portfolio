@@ -7,6 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useLoading, ThreeDots } from '@agney/react-loading';
 import SectionTitle from '../Section Title';
 import { contact } from '../../data/texts';
 import './styles.sass';
@@ -16,6 +17,7 @@ const useStyles = makeStyles({
         "&&": {
             fontFamily: `'Glory', sasn-serif`,
             fontWeight: 'bold',
+            textAlign: 'center',
             marginBottom: 30
         }
     },
@@ -64,17 +66,23 @@ const ContactSection = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [sending, setSending] = useState(false);
     const classes = useStyles();
+    const { containerProps, indicatorEl } = useLoading({
+        loading: true,
+        indicator: <ThreeDots width="30" color="#628aeb" />,
+    });
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setSending(true);
         let data = {
             name: name,
             email: email,
             subject: subject,
             message: message
         }
-        fetch(`http://localhost:5000/send-email`,
+        fetch(`https://tsahi-email-server.herokuapp.com/send-email`,
             {
                 method: 'POST',
                 headers: {
@@ -85,7 +93,13 @@ const ContactSection = () => {
             })
             .then(res => res.json())
             .then(res => {
-                toast.success(res);
+                if (res.result === 'success')
+                    toast.success(res.message);
+                else {
+                    console.log(res.message);
+                    toast.error('Oops! An unexpected error occurred');
+                }
+                setSending(false);
                 setName('');
                 setEmail('');
                 setSubject('');
@@ -215,8 +229,15 @@ const ContactSection = () => {
                     variant="outlined"
                     className="button btn-color btn-l-r"
                     type="submit"
+                    disabled={sending ? true : false}
                 >
-                    Send!
+                    {!sending ?
+                        'Send!'
+                        :
+                        <section className="indicator" {...containerProps}>
+                            {indicatorEl}
+                        </section>
+                    }
                 </Button>
             </form>
             <ToastContainer
