@@ -1,6 +1,7 @@
 import React from 'react';
 import { projects } from '../../data/projects';
 import Card from './Card/index';
+import SectionTitle from '../Section Title';
 import './styles.sass';
 
 const ProjectsSection = () => {
@@ -9,10 +10,7 @@ const ProjectsSection = () => {
 
     return (
         <div id="projects">
-            <div className="title-container">
-                <h1 className="title">Projects</h1>
-                <div className="divider" />
-            </div>
+            <SectionTitle title="projects" subtitle="What I've been working on lately" />
             <div className="cards">
                 {projectsArray.map((project) => {
                     return (

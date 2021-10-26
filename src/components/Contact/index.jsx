@@ -7,6 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SectionTitle from '../Section Title';
 import { contact } from '../../data/texts';
 import './styles.sass';
 
@@ -98,10 +99,7 @@ const ContactSection = () => {
 
     return (
         <div id="contact">
-            <div className="title-container">
-                <h1 className="title">Contact</h1>
-                <div className="divider" />
-            </div>
+            <SectionTitle title="contact" subtitle="Don't be shy, get in touch" />
             <Typography variant="h5" className={classes.about}>{contact}</Typography>
             <Grid
                 container

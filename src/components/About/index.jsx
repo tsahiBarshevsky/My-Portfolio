@@ -9,6 +9,7 @@ import { loremipsum, myStory } from '../../data/texts';
 import image from '../../assets/profile.jpg';
 import './styles.sass';
 import { skills } from '../../data/skills';
+import SectionTitle from '../Section Title';
 
 const useStyles = makeStyles(() => ({
     aboutTitle: {
@@ -108,10 +109,7 @@ const AboutSection = () => {
 
     return (
         <div id="about">
-            <div className="title-container">
-                <h1 className="title">About Me</h1>
-                <div className="divider" />
-            </div>
+            <SectionTitle title="about me" subtitle="Let me introduce myself" />
             <div className="about-text">
                 <img src={image} alt="" className="image mobile-image" />
                 <Typography variant="h6" className={classes.aboutText}>
