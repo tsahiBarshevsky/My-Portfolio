@@ -6,6 +6,7 @@ import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
 import { Icon } from '@iconify/react';
 import ProgressBar from 'react-animated-progress-bar';
 import { loremipsum, myStory } from '../../data/texts';
+import image from '../../assets/profile.jpg';
 import './styles.sass';
 import { skills } from '../../data/skills';
 
@@ -15,6 +16,15 @@ const useStyles = makeStyles(() => ({
             fontFamily: `'Glory', sans-serif`,
             fontWeight: 'bold',
             marginBottom: 15
+        }
+    },
+    aboutText: {
+        '&&': {
+            fontFamily: `'Glory', sans-serif`,
+            textAlign: 'start',
+            '@media (max-width: 700px)': {
+                textAlign: 'center'
+            }
         }
     },
     paragraph: {
@@ -74,21 +84,23 @@ const AboutSection = () => {
         switch (type) {
             case 'React':
             case 'React Native':
-                return <Icon icon="vscode-icons:file-type-reactjs" width="30" height="30" />;
+                return <Icon icon="vscode-icons:file-type-reactjs" width="25" height="25" />;
             case 'Redux':
-                return <Icon icon="logos:redux" width="30" height="30" />;
+                return <Icon icon="logos:redux" width="25" height="25" />;
             case 'JavaScript':
-                return <Icon icon="logos:javascript" width="25" height="25" />;
+                return <Icon icon="logos:javascript" width="20" height="20" />;
             case 'CSS':
-                return <Icon icon="vscode-icons:file-type-css" width="30" height="30" />;
+                return <Icon icon="vscode-icons:file-type-css" width="25" height="25" />;
             case 'SASS':
-                return <Icon icon="logos:sass" width="30" height="30" />;
+                return <Icon icon="logos:sass" width="25" height="25" />;
             case 'Material-UI':
-                return <Icon icon="logos:material-ui" width="30" height="30" />;
+                return <Icon icon="logos:material-ui" width="25" height="25" />;
             case 'Node.js':
-                return <Icon icon="vscode-icons:file-type-node" width="30" height="30" />;
+                return <Icon icon="vscode-icons:file-type-node" width="25" height="25" />;
+            case 'MongoDB':
+                return <Icon icon="vscode-icons:file-type-mongo" width="25" height="25" />;
             case 'Firebase':
-                return <Icon icon="logos:firebase" width="30" height="30" />
+                return <Icon icon="logos:firebase" width="25" height="25" />
             default:
                 return null;
         }
@@ -100,66 +112,70 @@ const AboutSection = () => {
                 <h1 className="title">About Me</h1>
                 <div className="divider" />
             </div>
-            <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="flex-start"
-                className={classes.grid}
-                style={{ marginBottom: 50 }}
-            >
-                <Grid item xs={12} sm={12} md={12} lg={6} xl={5}>
-                    <div className="about-text p30">
-                        <Typography variant="h5" className={classes.aboutTitle}>My Story</Typography>
-                        {myStory.split('\n').map((paragraph, index) => {
-                            return (
-                                <Typography
-                                    variant="h6"
-                                    className={classes.paragraph}
-                                    paragraph
-                                    key={index}
-                                >
-                                    {paragraph}
+            <div className="about-text">
+                <img src={image} alt="" className="image mobile-image" />
+                <Typography variant="h6" className={classes.aboutText}>
+                    <img src={image} alt="" className="image" />
+                    {myStory}
+                </Typography>
+            </div>
+            <Typography variant="h5" className={classes.subtitle}>Top Skills</Typography>
+            <div className="about-skills">
+                {skills.map((skill) => {
+                    return (
+                        <div className="skillbar" key={skill.id}>
+                            <ProgressBar
+                                width="250"
+                                trackWidth="13"
+                                percentage={skill.level}
+                                defColor={{
+                                    fair: '#628aeb',
+                                    good: '#628aeb',
+                                    excellent: '#628aeb',
+                                    poor: '#628aeb',
+                                }}
+                            />
+                            <div className="type">
+                                {renderIcon(skill.type)}
+                                <Typography variant="h6" className={classes.type}>
+                                    {skill.type}
                                 </Typography>
-                            )
-                        })}
-                    </div>
-                </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={6} xl={7}>
-                    <div className="about-skills p40">
-                        <Typography variant="h5" className={classes.aboutTitle}>My Top Skills</Typography>
-                        {skills.map((skill, index) => {
-                            return (
-                                <div className="skillbar" key={index}>
-                                    <div className="type">
-                                        {renderIcon(skill.type)}
-                                        <Typography variant="h6" className={classes.type}>
-                                            {skill.type}
-                                        </Typography>
-                                    </div>
-                                    <ProgressBar
-                                        width="100%"
-                                        height="10px"
-                                        rect
-                                        fontColor="white"
-                                        percentage={skill.level}
-                                        rectBorderRadius="20px"
-                                        trackPathColor="transparent"
-                                        bgColor="#333333"
-                                        trackBorderColor="transparent"
-                                        defColor={{
-                                            fair: '#628aeb',
-                                            good: '#628aeb',
-                                            excellent: '#628aeb',
-                                            poor: '#628aeb',
-                                        }}
-                                    />
-                                </div>
-                            )
-                        })}
-                    </div>
-                </Grid>
-            </Grid>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="about-skills-mobile">
+                {skills.map((skill, index) => {
+                    return (
+                        <div className="skillbar" key={index}>
+                            <div className="type">
+                                {renderIcon(skill.type)}
+                                <Typography variant="h6" className={classes.type}>
+                                    {skill.type}
+                                </Typography>
+                            </div>
+                            <ProgressBar
+                                width="100%"
+                                height="10px"
+                                rect
+                                fontColor="white"
+                                percentage={skill.level}
+                                rectBorderRadius="20px"
+                                trackPathColor="transparent"
+                                bgColor="#333333"
+                                trackBorderColor="transparent"
+                                defColor={{
+                                    fair: '#628aeb',
+                                    good: '#628aeb',
+                                    excellent: '#628aeb',
+                                    poor: '#628aeb',
+                                }}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
             <Typography variant="h5" className={classes.subtitle}>Things I love</Typography>
             <Grid
                 container
@@ -168,7 +184,7 @@ const AboutSection = () => {
                 alignItems="center"
             >
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
-                    <div className="contact-card">
+                    <div className="about-card">
                         <div className="icon-wrapper">
                             <BiCodeAlt className="icon" />
                         </div>
@@ -187,7 +203,7 @@ const AboutSection = () => {
                     </div>
                 </Grid>
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
-                    <div className="contact-card">
+                    <div className="about-card">
                         <div className="icon-wrapper">
                             <FaLaptopCode className="icon" />
                         </div>
@@ -206,7 +222,7 @@ const AboutSection = () => {
                     </div>
                 </Grid>
                 <Grid item xs="auto" sm={12} md={12} lg={4} xl={4} className={classes.item}>
-                    <div className="contact-card">
+                    <div className="about-card">
                         <div className="icon-wrapper">
                             <FaPaintBrush className="icon" />
                         </div>
@@ -225,10 +241,6 @@ const AboutSection = () => {
                     </div>
                 </Grid>
             </Grid>
-
-
-
-
         </div>
     )
 }
