@@ -13,11 +13,11 @@ footer
 
     .links
         display: none
-        justify-content: center
+        justify-content: flex-end
         align-items: center
         margin-bottom: 15px
 
-        @media screen and ( max-width: $xs )
+        @media screen and ( max-width: 625px )
             display: flex
 
         .link
@@ -35,3 +35,6 @@ footer
 
             .icon
                 font-size: 25px
+
+            .transform
+                transform: translateY(7%)

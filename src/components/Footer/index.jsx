@@ -1,7 +1,7 @@
+import React from 'react';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React from 'react';
-import { FiGithub, FiLinkedin, FiMail, FiFacebook } from 'react-icons/fi';
+import { FiGithub, GrLinkedinOption, FiMail, FaFacebookF } from 'react-icons/all';
 import './styles.sass';
 
 const useStyles = makeStyles({
@@ -38,14 +38,14 @@ const Footer = () => {
                     title="TsahiB on Linkedin"
                     className="link"
                 >
-                    <FiLinkedin className="icon" />
+                    <GrLinkedinOption className="icon" />
                 </a>
                 <a
                     href="mailto:tsahi.13@gmail.com"
                     className="link"
                     title="Tsahi's email"
                 >
-                    <FiMail className="icon" />
+                    <FiMail className="icon transform" />
                 </a>
                 <a
                     href="https://www.facebook.com/tsahi.barshavsky/"
@@ -54,7 +54,7 @@ const Footer = () => {
                     className="link"
                     title="TsahiB on Facebook"
                 >
-                    <FiFacebook className="icon" />
+                    <FaFacebookF className="icon" />
                 </a>
             </div>
             <Typography variant="h6" className={classes.copyright}>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiFacebook } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
+import { GrLinkedinOption } from 'react-icons/gr';
+import { FaFacebookF } from 'react-icons/fa';
 import './styles.sass';
 
 const SocialToolbar = () => {
@@ -22,7 +24,7 @@ const SocialToolbar = () => {
                     title="TsahiB on Linkedin"
                     className="link hover-social"
                 >
-                    <FiLinkedin style={{ fontSize: 20 }} />
+                    <GrLinkedinOption style={{ fontSize: 20 }} />
                 </a>
                 <a
                     href="https://www.facebook.com/tsahi.barshavsky/"
@@ -31,7 +33,7 @@ const SocialToolbar = () => {
                     title="TsahiB on Facebook"
                     className="link hover-social"
                 >
-                    <FiFacebook style={{ fontSize: 20 }} />
+                    <FaFacebookF style={{ fontSize: 20 }} />
                 </a>
                 <div className="vertical-line" />
             </div>
