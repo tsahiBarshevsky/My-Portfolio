@@ -5,6 +5,7 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { useHistory } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 import { projects } from '../../data/projects';
+import ScrollToTop from '../scrollToTop';
 import clsx from 'clsx';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
@@ -29,6 +30,7 @@ const Project = (props) => {
 
     return project !== undefined && (
         <>
+            <ScrollToTop />
             <Navbar />
             {!matches && <SocialToolbar />}
             <div className="project-container">

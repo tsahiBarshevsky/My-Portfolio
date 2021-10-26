@@ -9,7 +9,9 @@ import ContactSection from './components/Contact';
 import Footer from './components/Footer';
 import Project from './components/Project';
 import SocialToolbar from './components/Social Toolbar';
+import ScrollToTop from './components/scrollToTop';
 import './styles.sass';
+import ErrorPage from './components/Error Page/ErrorPage';
 
 const App = () => {
 
@@ -23,6 +25,7 @@ const App = () => {
         <Router>
             <Switch>
                 <Route exact path="/">
+                    <ScrollToTop />
                     <Navbar />
                     {!matches && <SocialToolbar />}
                     <Hero />
@@ -32,6 +35,7 @@ const App = () => {
                     <Footer />
                 </Route>
                 <Route exact path="/:title" component={Project} />
+                <Route exact path="*" component={ErrorPage} />
             </Switch>
         </Router>
     )
