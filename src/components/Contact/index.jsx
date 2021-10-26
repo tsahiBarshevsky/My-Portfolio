@@ -4,7 +4,6 @@ import { makeStyles } from '@mui/styles';
 import { MdLocationOn } from 'react-icons/md';
 import { BiEnvelopeOpen } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
 import clsx from 'clsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,22 +65,35 @@ const ContactSection = () => {
     const [message, setMessage] = useState('');
     const classes = useStyles();
 
-    function sendEmail(e) {
+    const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_xhdfxv4', 'template_5j0q1g9', e.target, process.env.REACT_APP_EMAILJS_USER_ID)
-            .then((result) => {
-                console.log(result.text);
-                toast.success('Your message sent successfully');
-                e.target.reset();
+        let data = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        }
+        fetch(`http://localhost:5000/send-email`,
+            {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => {
+                toast.success(res);
                 setName('');
                 setEmail('');
                 setSubject('');
                 setMessage('');
-            }, (error) => {
-                console.log(error.text);
-                toast.error('Oops... an unexpected error occurred');
-            }
-            );
+            })
+            .catch(error => {
+                console.log(error.message)
+                toast.error(error.message);
+            });
     }
 
     return (
