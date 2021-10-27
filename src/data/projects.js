@@ -6,7 +6,7 @@ export let projects = new Map()
             type: 'MERN Stack / Native App',
             subtitle: "Medicines management application that calculates the date on which the medicine should be thrown, depending on the usage time",
             date: new Date("2021-10-21"),
-            image: 'https://lh3.googleusercontent.com/QynzJ6rPojT59Dni1j24qHBum94GOTM-MUxJOMeW1PlhxQWSCxH5kWVA9CfPU-TXHmXsTJvDYPJ3FqCr2cLKbHYdLJhElhz3jc8NXmyFQVnyCeoYA30lFhLSZsd06EJHqUu4Z6RZkw=w2400',
+            image: 'https://lh3.googleusercontent.com/Wqi_TTD7rCfyx3n38rGE3R13mBmpIJGxENnIL9oZLzGkt-1SAei8EzNVElOiVOwHbxgPN50GfA_LloWcozwSpNOwWed9wGnoygWGzlx3u8Y6x1_h_TY2x_mFPctefI2ye5cEHLcbfA=w2400',
             stack: [
                 'React Native (Expo)',
                 'React Navigation',
@@ -40,16 +40,21 @@ export let projects = new Map()
             images: [
                 {
                     id: 0,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/Wqi_TTD7rCfyx3n38rGE3R13mBmpIJGxENnIL9oZLzGkt-1SAei8EzNVElOiVOwHbxgPN50GfA_LloWcozwSpNOwWed9wGnoygWGzlx3u8Y6x1_h_TY2x_mFPctefI2ye5cEHLcbfA=w2400',
+                },
+                {
+                    id: 1,
                     originalTitle: 'Home screen and color palette',
                     original: 'https://lh3.googleusercontent.com/QynzJ6rPojT59Dni1j24qHBum94GOTM-MUxJOMeW1PlhxQWSCxH5kWVA9CfPU-TXHmXsTJvDYPJ3FqCr2cLKbHYdLJhElhz3jc8NXmyFQVnyCeoYA30lFhLSZsd06EJHqUu4Z6RZkw=w2400',
                 },
                 {
-                    id: 1,
+                    id: 2,
                     originalTitle: '',
                     original: 'https://lh3.googleusercontent.com/253ogLLJeGx75OdBsBOV4GL6Pzj8GTDAAG0iQmCOu2nPMdoEiKIs85xZAtpEEK_KR7kXVT5B4T3CSe1i3fnTO7E9wwA1QpXggnjHgUE40kCANzZZDaNQmurUPfvWjHDyNXhO_TSMjA=w2400',
                 },
                 {
-                    id: 2,
+                    id: 3,
                     originalTitle: 'Calendar, insertion and account screens',
                     original: 'https://lh3.googleusercontent.com/MlapSOb55XopACTWgGXb75QQHZY5M37nPim1mRBzO3EV3z27vzrwP26XdPEp8vGjvghTPZEEJjOxf7N_icgjmgmcQJlKbKaIMGwDT9aMTxMqi_aAHbwt82t21bk3CxzEyQVwZZ8i7A=w2400',
                 },
@@ -62,7 +67,7 @@ export let projects = new Map()
             title: 'Note To Self',
             subtitle: "A basic todo app using React Native Expo, as a first practice of this thecnology",
             date: new Date("2021-10-02"),
-            image: 'https://lh3.googleusercontent.com/6gQ2yX8wvsshBwVFpTIY8bPulG46O7tG1OtpgU8cpj2z4PuQ9eC0sZ7N7xH2sqB8PD3I7HHf9agcFFXam2UpJHelxAWUt9w7EYOSTiBaQlC1uKaVfomxy6NAHvCLq2zbqJiOely4Uw=w2400',
+            image: 'https://lh3.googleusercontent.com/SxLZOlpmz1Pl2hbktsNAHunNuDMBx5CKQASx8Vj8K_8f5-hpIT20pNNtiLFO76KXnRx2yocbJJ2vCcIONi_vP1aKimiD1obOxsHRWXC-B19dIeQBA-Nbfz-Wl4jCGl30OQAXAxDyuA=w2400',
             stack: [
                 'React Native (Expo)',
                 'React Navigation',

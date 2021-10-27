@@ -6,7 +6,7 @@ import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
 import { Icon } from '@iconify/react';
 import ProgressBar from 'react-animated-progress-bar';
 import { coding, frontend, myStory, webAndApps } from '../../data/texts';
-import image from '../../assets/profile.jpg';
+import image from '../../assets/IMG_0561.jpg';
 import { skills } from '../../data/skills';
 import SectionTitle from '../Section Title';
 import './styles.sass';
