@@ -9,11 +9,10 @@
     width: 100%
     height: 100vh
     color: white
-    background-color: $primary
     z-index: 1
     text-align: center
     cursor: default
-    border-bottom: 1px solid rgba($primary, 0.8)
+    background-color: $primary
 
     @media screen and ( max-width: $sm )
         height: 100%
@@ -27,7 +26,7 @@
         width: 100%
         height: 100%
         opacity: 0.25
-        background: linear-gradient(to top, #222733, #222733cc, #22273399, #22273399, #22273399), url(../../assets/hero.jpg) no-repeat center center
+        background: linear-gradient(to top, hsl(222.35, 19.54%, 17.06%) 0%, hsla(222.35, 19.54%, 17.06%, 0.99) 8.1%, hsla(222.35, 19.54%, 17.06%, 0.964) 15.5%, hsla(222.35, 19.54%, 17.06%, 0.922) 22.5%, hsla(222.35, 19.54%, 17.06%, 0.868) 29%, hsla(222.35, 19.54%, 17.06%, 0.806) 35.3%, hsla(222.35, 19.54%, 17.06%, 0.736) 41.2%, hsla(222.35, 19.54%, 17.06%, 0.662) 47.1%, hsla(222.35, 19.54%, 17.06%, 0.588) 52.9%, hsla(222.35, 19.54%, 17.06%, 0.514) 58.8%, hsla(222.35, 19.54%, 17.06%, 0.444) 64.7%, hsla(222.35, 19.54%, 17.06%, 0.382) 71%, hsla(222.35, 19.54%, 17.06%, 0.328) 77.5%, hsla(222.35, 19.54%, 17.06%, 0.286) 84.5%, hsla(222.35, 19.54%, 17.06%, 0.26) 91.9%, hsla(222.35, 19.54%, 17.06%, 0.25) 100%), url(../../assets/hero.jpg) no-repeat center center
         background-repeat: no-repeat
         background-position: center center
         background-size: cover
@@ -38,6 +37,7 @@
         background-color: $secondary
         width: 100%
         height: 50px
+        z-index: 1
 
         @media screen and ( max-width: $sm )
             height: 30px
