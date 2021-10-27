@@ -3,22 +3,21 @@ export let projects = new Map()
         {
             index: 12,
             title: 'Save The Date',
-            type: 'MERN Stack / Native app',
-            subtitle: "Medicines management native app with a main feature: Calculating the date it should be thrown",
+            type: 'MERN Stack / Native App',
+            subtitle: "Medicines management application that calculates the date on which the medicine should be thrown, depending on the usage time",
             date: new Date("2021-10-21"),
             image: 'https://lh3.googleusercontent.com/QynzJ6rPojT59Dni1j24qHBum94GOTM-MUxJOMeW1PlhxQWSCxH5kWVA9CfPU-TXHmXsTJvDYPJ3FqCr2cLKbHYdLJhElhz3jc8NXmyFQVnyCeoYA30lFhLSZsd06EJHqUu4Z6RZkw=w2400',
             stack: [
                 'React Native (Expo)',
                 'React Navigation',
                 'Redux',
-                'React Redux',
                 'JavaScript',
                 'AsyncStorage',
                 'Node.js',
                 'ExpressJS',
                 'MongoDB',
                 'Firebase',
-                'Top npm packages:', ['moment-js', 'react-native-calendars', 'react-native-toast-message', 'expo-image-picker', 'mongoose']
+                'Top npm packages:', ['moment-js', 'react-redux', 'react-native-calendars', 'react-native-toast-message', 'expo-image-picker', 'mongoose']
             ],
             utilities: [
                 'Figma',
@@ -66,10 +65,12 @@ export let projects = new Map()
             image: 'https://lh3.googleusercontent.com/6gQ2yX8wvsshBwVFpTIY8bPulG46O7tG1OtpgU8cpj2z4PuQ9eC0sZ7N7xH2sqB8PD3I7HHf9agcFFXam2UpJHelxAWUt9w7EYOSTiBaQlC1uKaVfomxy6NAHvCLq2zbqJiOely4Uw=w2400',
             stack: [
                 'React Native (Expo)',
-                'React navigation',
+                'React Navigation',
                 'JavaScript',
                 'UI-Kitten',
                 'AsyncStorage',
+            ],
+            utilities: [
                 'Figma'
             ],
             description:
@@ -114,8 +115,10 @@ export let projects = new Map()
                 'ExpressJS',
                 'MongoDB',
                 'Firebase',
-                'Postman',
                 'Top npm packages:', ['react-beautiful-dnd', 'react-chartjs', 'react-data-table-component', 'react-router-dom']
+            ],
+            utilities: [
+                'Postman'
             ],
             description:
                 `When I started the job search process, I used an Excel file to organize all the jobs I've been applied for and later, I found a site that allows doing the same thing more conveniently. But I felt it was very basic and lacking features that could further facilitate the process, so I'm happy to introduce you to Jobi - my version of a job tracking site.\n` +
@@ -149,7 +152,6 @@ export let projects = new Map()
                     original: 'https://lh3.googleusercontent.com/GzInwlqPeHmTZXPDiJbVEio8hAhFqIC8f2ZRPMwQgKurYd5Hvk89OgSaLzFJlMHC-LjfmhT3zHeFtQ7bqXbwvek1jdxoQFOhHvrMBIlgi7UQJQSaHzfm1SuwPGMCCyIjV2UeMBh7eQ=w2400',
                 }
             ],
-            top: true,
             web: true
         })
     .set('phone-zone',
@@ -160,6 +162,7 @@ export let projects = new Map()
             date: new Date("2021-7-4"),
             image: 'https://lh3.googleusercontent.com/6ZuibTOPwgkdLDumVTtmwtFe7IDc7gguPaDKXY8_G-pm0l9cEpiZ_gs0bcg14J5GkWPI3xF9TCzUH0lByarIOtFVdK9z_wWmeMsekpSlnmHLvj8GlXTPCfKlMP-hT4xlbpAkEomEzQ=w2400',
             stack: ['JavaScript', 'Sass', 'ReactJS', 'Material-UI', 'Stripe', 'Commerce.js', 'Top npm packages:', ['react-hook-form', 'react-router-dom', '@stripe']],
+            utilities: [],
             description:
                 `Phone Zone is a modern and fully responsive online e-commerce store, inspired by some real online stores and allows you to "order" smartphones and mobile accessories. As a Frontend Developer, it was important to me to focus on creating an easy and intuitive user interface with a clean and modern design. For the avoidance of doubt, this is just a personal project and I don't sell anything.\n\n` +
                 `In the Frontend, I've been using React with Material-UI framework and SASS. In the Backend, I've been using Stripe for the payment system and Commerce.JS, a service that allows managing the Backend part of stores like that: Store the products and their information, determine shipping countries and subdivisions prices and managing orders in an easy way.\n\n` +
@@ -169,7 +172,7 @@ export let projects = new Map()
                 { id: 1, icon: 'git', caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/phone-zone' },
             ],
             otherCreators: [],
-            type: 'React app',
+            type: 'React App',
             youtube: null,
             images: [
                 {
@@ -193,7 +196,6 @@ export let projects = new Map()
                     original: 'https://lh3.googleusercontent.com/9bq0GubLrnSBtwN2YjZVEgPzF5NeZNIUG07WH5kllouMH-wlJYsnT_LQSb6EI4l-y3ItFoirTvQy61_IqyjlZxTErwni0pWM01D5tpbGQBHbQ44h5s7luyC5kh_RI7_kUl1Mo_ixAw=w2400',
                 }
             ],
-            top: true,
             web: true
         })
     .set('get-a-card',
@@ -203,7 +205,8 @@ export let projects = new Map()
             subtitle: "An online digital business cards generator using several templates",
             date: new Date('2021-5-23'),
             image: 'https://lh3.googleusercontent.com/cBjxIN-oGgyddrV_tzL4rKTKCsUQHRS3zXtxW5XAvzr-CVDy8o2gmdtKLkbCaVeroG4sxp8vz-c0A_x9wNkCDqWVOCJv0D7SDX0eJoUhi1DX9mneVIxga4_b6ZKnigw3a-lik5szgA=w2400',
-            stack: ['JavaScript', 'Sass', 'ReactJS', 'Material-UI', 'Node.js', 'ExpressJS', 'MongoDB', 'Firebase', 'Postman', 'Top npm packages:', ['animate.css', 'react-share', 'react-router-dom']],
+            stack: ['JavaScript', 'Sass', 'ReactJS', 'Material-UI', 'Node.js', 'ExpressJS', 'MongoDB', 'Firebase', 'Top npm packages:', ['animate.css', 'react-share', 'react-router-dom']],
+            utilities: ['Postman'],
             description:
                 "We're living in a digital world and the changes didn't skip the world of marketing either, which has been changed dramatically in recent years. One of the major changes applies to business cards, which from a small physical card, has gone digital and creative.\n\n" +
                 "Because of that, I've decided to build this web service - Get a Card!\n Get a card allows you to create as many digital business cards by yourself.\n" +
@@ -236,7 +239,6 @@ export let projects = new Map()
                     original: 'https://lh3.googleusercontent.com/qnkw0irzE2Gs-Cx1UCreDENif1Y4j9-HtohsQhnedaaq1OyTNlW4zlME8lsjopaF79m78Vlk-4iVx2gyb8E-nJNA05XoPix98BfMt1XR0PkJZHoBj9J2EP4tbzI0WzU9bCLJWOb0kA=w2400',
                 }
             ],
-            top: true,
             web: true
         })
     // .set('save-the-date',
@@ -296,6 +298,7 @@ export let projects = new Map()
             date: new Date("2021-4-1"),
             image: 'https://lh3.googleusercontent.com/hbM7Zh46b89aKcwR9X5mzY8fZVo_75-5oA2Hiry62y8gmZlaKnfeYDbMTgJDRkT-7Sf0CsmAs6Yzlpv_p5BnAgIBsiR5D_-N56HV2O3uMmzqcWc0NQ17KMgMMHhHoac63sVno7n16Q=w2400',
             stack: ['JavaScript', 'SCSS', 'ReactJS', 'Material-UI', 'Firebase', 'Top npm packages:', ['chart.js', 'date-fns', 'emailjs-com', 'jss-rtl', 'react-input-tags-hooks', 'react-router-dom']],
+            utilities: [],
             description:
                 "I always loved programming and writing has a huge part of who I am, so what happened when I've dared to combine those different worlds? a Blog!\n\n" +
                 "I'm blogging for over 5 years on two websites, but I've never had my own blog. So after learning and developing some websites,  I felt that it's the right time to develop my own blog. Because it's important to me to keep practicing in React, I've preferred not to use built-in platforms like WordPress and build it from scratch.\n\n" +
@@ -306,10 +309,9 @@ export let projects = new Map()
                 { id: 1, icon: 'git', caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/personal-blog' }
             ],
             otherCreators: [],
-            type: 'React web',
+            type: 'React Website',
             youtube: null,
             images: null,
-            top: false,
             web: true
         })
     .set('portfolio-plus',
@@ -320,6 +322,7 @@ export let projects = new Map()
             date: new Date('2021-1-24'),
             image: 'https://lh3.googleusercontent.com/kMIJChi_DN8WaEs94gBRQ75jGPKSzUSmQC2fDZvODYkyZv5EqDEr6NLxAB_M7fc9DhfLVYCjjoWEHccpgGYayd3pgftByOXuI0pyl3LRT9mq8FoE8Ie8fQegF3USOdU5bdIMmRbc1A=w2400',
             stack: ['JavaScript', 'CSS3', 'ReactJS', 'Material-UI', 'Styled-Components', 'Firebase', 'Top npm packages:', ['clsx', 'react-share', 'react-router-dom']],
+            utilities: [],
             description:
                 "Portfolio Plus is a web service that allows you to create a designed landing page with your personal projects in a readable and colorful way. The most important feature - you can send it easily to anyone. The idea was born out of a need to unify all projects in one place, which will be a slightly less generic and banal way as in a resume. \n\n" +
                 "So, how does it works? \n Once you create an account with a standard email, username and password, you will get a page of your own. Add as many projects as you want, upload a profile image, choose a style and share it with everyone! Easy, isn't it? \n\n" +
@@ -332,7 +335,6 @@ export let projects = new Map()
             type: 'React app',
             youtube: null,
             images: null,
-            top: false,
             web: true
         })
     .set('path-to-success',
@@ -343,6 +345,7 @@ export let projects = new Map()
             date: new Date('2020-11-1'),
             image: 'https://lh3.googleusercontent.com/w7Vn-noUuuyEjxZ2GbYXJ_q7YFg7T0hP3859XHLdN7DMNg0IfEb7a1-uPHmtAGmZA3z92qZSleeU5JZFYxqzbogb2T54I8lXAeScCbAJTmoa6u_YzwFtm9ekse8tNmcx8X96Sa504Q=w2400',
             stack: ['JavaScript', 'SASS', 'ReactJS', 'Material-UI', 'Framer Motion'],
+            utilities: [],
             description:
                 "I've graduated in 2019 after 4 challenging years and since then, I'm interested in web development. \n\n" +
                 "During the degree, I summarized quite a bit of the study materials, and I know how difficult a Computer Science degree can be, so I've decided to build a website with 2 goals: " +
@@ -354,10 +357,9 @@ export let projects = new Map()
                 { id: 1, icon: 'git', caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/path-to-success' }
             ],
             otherCreators: [],
-            type: 'React web',
+            type: 'React Website',
             youtube: null,
             images: null,
-            top: false,
             web: true
         })
     .set('search-without-spoilers',
@@ -368,6 +370,7 @@ export let projects = new Map()
             date: new Date("2020-9-23"),
             image: 'https://lh3.googleusercontent.com/XLdCB_EHOQ7gIe7m1ok1QzbmkIjz_Ax41ZaC2eQoPqmcVxCQgKYrpVSLstRi25mSnqLSnaZ55-yXOng5e5grCwGZqtEUa-jsgRBykvEahaouE8MTC_mFcbcFVRuAgbByP062n3lxUg=w2400',
             stack: ['Python', 'PyCharm'],
+            utilities: [],
             description:
                 "I don't like spoilers, so much so that I prefer not to see trailers and even pictures from a series or movie that has not yet been screened.\n" +
                 "The problem is when I want to check when a new season or movie will airing, I need to encounter small spoilers.\n\n" +
@@ -377,10 +380,9 @@ export let projects = new Map()
                 { id: 0, icon: 'git', caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/Search-Without-Spoilers-Bot' }
             ],
             otherCreators: [],
-            type: 'Telegram bot',
+            type: 'Telegram Bot',
             youtube: 'https://www.youtube.com/embed/mO-mX_kYXSk',
             images: null,
-            top: false,
             web: false
         })
     .set('game-of-phones',
@@ -391,6 +393,7 @@ export let projects = new Map()
             date: new Date("2019-5-28"),
             image: 'https://lh3.googleusercontent.com/V12sHHJPwZ-QtTZtgKHRp2hjFskBKypqvftUQ00fWqzvmNLy25h6QUmaox7F23YnAk49XzfR7c0txIrRSp_PRpxJ32MwgmD_PcI7DtZLl9PYpSyWgjrMZPkHxA6guIF7W--tYXbNIw=w2400',
             stack: ['Python', 'PyCharm'],
+            utilities: [],
             description:
                 "A Windows application developed as part of a Heuristic Algorithms course. \n\n" +
                 "The app ranks mobile phones by some criteria using 2 heuristic algorithms: TOPSIS and Borda. Also, the app uses real data from GSMArena site which has been scraped ahead of time by a Python script. \n\n" +
@@ -406,7 +409,6 @@ export let projects = new Map()
             youtube: 'https://www.youtube.com/embed/v9cWouBaRNY',
             grade: 100,
             images: null,
-            top: false,
             web: false
         })
     .set('spin-and-learn',
@@ -417,6 +419,7 @@ export let projects = new Map()
             date: new Date("2019-2-4"),
             image: 'https://lh3.googleusercontent.com/RxoiIGbgUDwLb8l_sDQ_HEWloUZNKav8SSg4x457LdD8q9ttW-ZOkJev7TNuz3VnzN4X6PVQaKmHLpCH1NmtSZlrrpFuCp-_4K5XAMC7yFRyEAm-f1l1VhSzgz0TKRV1oOo1MDN39w=s200-p-k',
             stack: ['Java', 'XML', 'Android Studio', 'Adobe Photoshop'],
+            utilities: [],
             description:
                 "An educational mind game developed as part of an Android course.\nThe game is based on the Wheel of Fortune: The wheel containing four different types of questions must be rotated: Completing letters in a word by definition, completing a proverb, identifying capital cities and simple exercises in mathematics.\n\n" +
                 "The aim of the game is to accumulate as many correct answers as possible and earn as many points as possible when there are 10 questions.\n\n" +
@@ -428,11 +431,10 @@ export let projects = new Map()
             otherCreators: [
                 { id: 0, caption: 'KL', photo: 'https://lh3.googleusercontent.com/8TQFjmt-kcJMNnlC2KUR5jGSgGXz1zR3MTQ7LnGTVOS1-EssawWFuDborRBxiQvP6Pctl3MkW_YNTvohDF511dBkYbQNxpKHIbIlGqebKZs90ed83Wts3UKJ_lwrDn-S7kY_QIUrFg=s200-p-k', url: 'https://www.linkedin.com/in/kostya-lokshin-6577a2163/' }
             ],
-            type: 'Android app',
+            type: 'Android App',
             youtube: 'https://www.youtube.com/embed/jB1Oi45VU8k',
             grade: 100,
             images: null,
-            top: false,
             web: false
         })
     .set('MMU-client–server-based',
@@ -443,6 +445,7 @@ export let projects = new Map()
             date: new Date("2018-6-28"),
             image: 'https://lh3.googleusercontent.com/0nbL2zHiENeti3i0rOPq7pDXfXzxtGedg8H478E0nXA2qyJPtj5QdwQA2WEArHUem5N4NqFZCgYaV6CEpteN_ULcLrO-JKRqjQmCi1iHApdVtX6SI8d5qUaRkITd2h96kkwR-k1gEg=w2400',
             stack: ['Java', 'Eclipse'],
+            utilities: [],
             description:
                 "A windows application developed as part of an Internet Programming in Java course.\n\n" +
                 "The system simulates the operation of the Memory Management Unit by using HashMap with two fields: page and key. The paging between the different pages is done using 4 paging algorithms: Most Recent Used, Least Recent Used, Random and Second Chance.\n\n" +
@@ -458,6 +461,5 @@ export let projects = new Map()
             youtube: 'https://www.youtube.com/embed/bkKoEZDgPGo',
             grade: 95,
             images: null,
-            top: false,
             web: false
         });

@@ -5,11 +5,11 @@ import { BiCodeAlt } from 'react-icons/bi';
 import { FaLaptopCode, FaPaintBrush } from 'react-icons/fa';
 import { Icon } from '@iconify/react';
 import ProgressBar from 'react-animated-progress-bar';
-import { loremipsum, myStory } from '../../data/texts';
+import { coding, frontend, myStory, webAndApps } from '../../data/texts';
 import image from '../../assets/profile.jpg';
-import './styles.sass';
 import { skills } from '../../data/skills';
 import SectionTitle from '../Section Title';
+import './styles.sass';
 
 const useStyles = makeStyles(() => ({
     aboutTitle: {
@@ -113,8 +113,19 @@ const AboutSection = () => {
             <div className="about-text">
                 <img src={image} alt="" className="image mobile-image" />
                 <Typography variant="h6" className={classes.aboutText}>
-                    <img src={image} alt="" className="image" />
-                    {myStory}
+                    <img src={image} alt="Oops! It was supposed to be me" className="image" />
+                    {myStory.split('\n').map((paragraph, index) => {
+                        return (
+                            <Typography
+                                variant="h6"
+                                paragraph
+                                key={index}
+                                className={classes.aboutText}
+                            >
+                                {paragraph}
+                            </Typography>
+                        )
+                    })}
                 </Typography>
             </div>
             <Typography variant="h5" className={classes.subtitle}>Top Skills</Typography>
@@ -196,7 +207,7 @@ const AboutSection = () => {
                             variant="subtitle1"
                             className={classes.cardSubtitle}
                         >
-                            {loremipsum}
+                            {frontend}
                         </Typography>
                     </div>
                 </Grid>
@@ -209,13 +220,13 @@ const AboutSection = () => {
                             variant="h5"
                             className={classes.cardTitle}
                         >
-                            Webs and apps
+                            Web and Apps
                         </Typography>
                         <Typography
                             variant="subtitle1"
                             className={classes.cardSubtitle}
                         >
-                            {loremipsum}
+                            {webAndApps}
                         </Typography>
                     </div>
                 </Grid>
@@ -234,7 +245,7 @@ const AboutSection = () => {
                             variant="subtitle1"
                             className={classes.cardSubtitle}
                         >
-                            {loremipsum}
+                            {coding}
                         </Typography>
                     </div>
                 </Grid>

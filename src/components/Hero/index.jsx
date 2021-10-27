@@ -1,8 +1,11 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { BsArrowRightShort } from 'react-icons/bs';
 import { BigHead } from '@bigheads/core';
+import { Link } from 'react-scroll';
 import './styles.sass';
+import { about } from '../../data/texts';
 
 const useStyles = makeStyles({
     welcome: {
@@ -59,13 +62,29 @@ const Hero = () => {
             <div className="content">
                 <Typography variant="h4" className={classes.welcome}>Hey there, Welcome to my portfolio!</Typography>
                 <div className="content-bottom">
-                    <Typography variant="h6" className={classes.paragraph} paragraph>
-                        I'm Tsahi, a web developer with a design background.
-                    </Typography>
-                    <Typography variant="h6" className={classes.paragraph} paragraph>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere lectus. Phasellus egestas magna sed elementum euismod. Duis consequat tellus turpis. Quisque non accumsan neque. Proin nec leo metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mi nunc, lacinia quis ultrices sit amet, blandit in ex.
-                    </Typography>
+                    {about.split('\n').map((paragraph, index) => {
+                        return (
+                            <Typography
+                                variant="h6"
+                                key={index}
+                                className={classes.paragraph}
+                                paragraph
+                            >
+                                {paragraph}
+                            </Typography>
+
+                        )
+                    })}
                 </div>
+                <Link to='about' smooth spy exact='true'>
+                    <Button
+                        variant="outlined"
+                        className="button btn-color btn-l-r"
+                    >
+                        Explore more
+                        <BsArrowRightShort className="arrow" />
+                    </Button>
+                </Link>
             </div>
         </div>
     )
