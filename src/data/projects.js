@@ -4,6 +4,7 @@ export let projects = new Map()
             index: 12,
             title: 'Save The Date',
             type: 'MERN Stack / Native App',
+            keywords: ['mern', 'app'],
             subtitle: "Medicines management application that calculates the date on which the medicine should be thrown, depending on the usage time",
             date: new Date("2021-10-21"),
             image: 'https://lh3.googleusercontent.com/Wqi_TTD7rCfyx3n38rGE3R13mBmpIJGxENnIL9oZLzGkt-1SAei8EzNVElOiVOwHbxgPN50GfA_LloWcozwSpNOwWed9wGnoygWGzlx3u8Y6x1_h_TY2x_mFPctefI2ye5cEHLcbfA=w2400',
@@ -88,6 +89,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'Native App',
+            keywords: ['app'],
             youtube: 'https://www.youtube.com/embed/ekdHmk3_JTc',
             images: [
                 {
@@ -134,6 +136,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'MERN Stack',
+            keywords: ['mern', 'react'],
             youtube: null,
             images: [
                 {
@@ -178,6 +181,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'React App',
+            keywords: ['react'],
             youtube: null,
             images: [
                 {
@@ -226,6 +230,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'MERN Stack',
+            keywords: ['mern', 'react'],
             youtube: null,
             images: [
                 {
@@ -315,6 +320,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'React Website',
+            keywords: ['react'],
             youtube: null,
             images: null,
             web: true
@@ -338,6 +344,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'React app',
+            keywords: ['react'],
             youtube: null,
             images: null,
             web: true
@@ -363,6 +370,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'React Website',
+            keywords: ['react'],
             youtube: null,
             images: null,
             web: true
@@ -386,6 +394,7 @@ export let projects = new Map()
             ],
             otherCreators: [],
             type: 'Telegram Bot',
+            keywords: ['python'],
             youtube: 'https://www.youtube.com/embed/mO-mX_kYXSk',
             images: null,
             web: false
@@ -411,6 +420,7 @@ export let projects = new Map()
                 { id: 1, caption: 'KL', photo: 'https://lh3.googleusercontent.com/8TQFjmt-kcJMNnlC2KUR5jGSgGXz1zR3MTQ7LnGTVOS1-EssawWFuDborRBxiQvP6Pctl3MkW_YNTvohDF511dBkYbQNxpKHIbIlGqebKZs90ed83Wts3UKJ_lwrDn-S7kY_QIUrFg=s200-p-k', url: 'https://www.linkedin.com/in/kostya-lokshin-6577a2163/' }
             ],
             type: 'Windows App',
+            keywords: ['academic', 'python'],
             youtube: 'https://www.youtube.com/embed/v9cWouBaRNY',
             grade: 100,
             images: null,
@@ -437,6 +447,7 @@ export let projects = new Map()
                 { id: 0, caption: 'KL', photo: 'https://lh3.googleusercontent.com/8TQFjmt-kcJMNnlC2KUR5jGSgGXz1zR3MTQ7LnGTVOS1-EssawWFuDborRBxiQvP6Pctl3MkW_YNTvohDF511dBkYbQNxpKHIbIlGqebKZs90ed83Wts3UKJ_lwrDn-S7kY_QIUrFg=s200-p-k', url: 'https://www.linkedin.com/in/kostya-lokshin-6577a2163/' }
             ],
             type: 'Android App',
+            keywords: ['academic', 'app'],
             youtube: 'https://www.youtube.com/embed/jB1Oi45VU8k',
             grade: 100,
             images: null,
@@ -463,6 +474,7 @@ export let projects = new Map()
                 { id: 0, caption: 'SA', photo: 'https://lh3.googleusercontent.com/KV_ZS78Y5VyDJe9sZGFMADu02qbPgBOjUpGKZjf1J65aJiIkqa50GCx_0abubYiw_4lWe3tYNsnuKLLJclZyCbfDn5oQSkGARXykK2OQxug_fGDP3zpaxQC00YKVM8pS1iZvvDQIYA=s200-p-k', url: 'https://www.linkedin.com/in/shelly-ambar-a96382146' },
             ],
             type: 'Windows App',
+            keywords: ['academic'],
             youtube: 'https://www.youtube.com/embed/bkKoEZDgPGo',
             grade: 95,
             images: null,
