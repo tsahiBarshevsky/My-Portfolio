@@ -107,7 +107,7 @@ const Project = (props) => {
                         )
                     })}
                 </ul>
-                {project.utilities &&
+                {project.utilities.length > 0 &&
                     <>
                         <div className="subtitle-container pt20">
                             <Typography variant="h4" className={classes.subtitle}>Utilities</Typography>
@@ -122,7 +122,7 @@ const Project = (props) => {
                         </ul>
                     </>
                 }
-                {project.otherCreators.length > 0 ?
+                {project.otherCreators.length > 0 &&
                     <div style={{ width: '100%', paddingTop: 20 }}>
                         {project.otherCreators.length === 1 ?
                             <div className="subtitle-container">
@@ -145,7 +145,8 @@ const Project = (props) => {
                                 </div>
                             )}
                         </div>
-                    </div> : null}
+                    </div>
+                }
                 {project.youtube &&
                     <div className="video-container">
                         <iframe title="video"
