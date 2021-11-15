@@ -31,9 +31,8 @@ const useStyles = makeStyles({
     button: {
         '&&': {
             fontFamily: `'Glory', sans-serif`,
-            backgroundColor: 'transparent',
+            backgroundColor: '#628aeb',
             textTransform: 'capitalize',
-            border: '2px solid #628aeb',
             color: 'white',
             width: 90,
             height: 35,
@@ -41,7 +40,7 @@ const useStyles = makeStyles({
             borderRadius: 10,
             '&:hover':
             {
-                backgroundColor: '#628aeb33'
+                backgroundColor: '#628aebCC'
             }
 
         }

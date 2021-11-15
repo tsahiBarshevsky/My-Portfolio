@@ -1,4 +1,39 @@
 export let projects = new Map()
+    // .set('yeladudes',
+    //     {
+    //         index: 13,
+    //         title: 'Yeladudes',
+    //         type: 'MERN Stack',
+    //         keywords: ['mern', 'react'],
+    //         subtitle: "TBA",
+    //         date: new Date("2021-11-16"),
+    //         image: 'https://lh3.googleusercontent.com/xHUGyMlbgBS3-OFoJ9QnzZ0hBGfVNE_xOtLDhURKXPBzslnyzyx73NRh0kNOFaHNKlX-NR-QftL-nEPvc4WYawovlmW7NI3S4iNsBjxaqa-rnUBkdjjgLj6HCf_EZKmZD1KvTh5Z1Q=w2400',
+    //         stack: [
+    //             'ReactJS',
+    //             'MUI (Material-UI V5)',
+    //             'Redux',
+    //             'JavaScript',
+    //             'SASS',
+    //             'Node.js',
+    //             'ExpressJS',
+    //             'MongoDB',
+    //             'Firebase',
+    //             'Top npm packages:', ['@pathofdev/react-tag-input', 'immutability-helper', 'react-redux', 'react-router-dom', 'mongoose']
+    //         ],
+    //         utilities: [
+    //             'Postman'
+    //         ],
+    //         description:
+    //             `TBA`,
+    //         links: [
+    //             { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/yeladudes' },
+    //             { id: 1, caption: 'Characterization file', url: 'https://docs.google.com/document/d/1Qv4KBQfDuq_Jg8UezCg7VIMjGU7MrYdqqOd3XlSvRqA/edit?usp=sharing' },
+    //         ],
+    //         otherCreators: [],
+    //         youtube: null,
+    //         images: null,
+    //         web: false
+    //     })
     .set('save-the-date',
         {
             index: 12,
