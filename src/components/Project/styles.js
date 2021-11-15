@@ -56,7 +56,7 @@ export const useStyles = makeStyles({
     {
         '&&': {
             fontFamily: `'Glory', sans-serif`,
-            backgroundColor: '#3498db',
+            backgroundColor: '#628aeb',
             color: 'white',
             textTransform: 'capitalize',
             margin: '10px 0',
@@ -64,7 +64,7 @@ export const useStyles = makeStyles({
             height: 40,
             letterSpacing: 1,
             borderRadius: 5,
-            '&:hover': { backgroundColor: '#3498dbCC' },
+            '&:hover': { backgroundColor: '#628aebCC' },
         }
     },
     button:

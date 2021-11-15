@@ -79,7 +79,7 @@ const Hero = () => {
                 <Link to='about' smooth spy exact='true'>
                     <Button
                         variant="outlined"
-                        className="button btn-color btn-l-r"
+                        className="button"
                     >
                         Explore more
                         <BsArrowRightShort className="arrow" />

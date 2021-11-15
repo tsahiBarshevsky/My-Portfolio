@@ -66,42 +66,22 @@
         transition: 0.25s ease-in-out
 
         .button
+            font-family: 'Glory', sans-serif
             border-radius: 10px
             text-decoration: none
             text-transform: capitalize
-            position: relative
             font-size: 15px
             font-weight: bold
-            border: 2px solid white
             z-index: 20
-            transition: all 0.35s cubic-bezier(1.000, 0.500, 0.000, 1.000)
+            letter-spacing: 1px
+            color: white
+            background-color: $glow-color
 
             &:hover
-                color: white
+                animation: pulse 1s
+                box-shadow: 0 0 0 1.5em rgba(white,0)
+                background-color: $glow-color
 
-            &::before, &::after
-                content: ''
-                position: absolute
-                z-index: -1
-                border-radius: 7px
-
-                transition: all 0.35s cubic-bezier(1.000, 0.500, 0.000, 1.000)
-
-        .btn-color
-            border-color: $glow-color
-            color: $glow-color
-
-            &::before,
-            &::after
-                background: $glow-color
-
-        .btn-l-r::after
-            height: 100%
-            width: 0
-            top: 0
-
-        .btn-l-r:hover::after
-            width: 100%
-
-        .btn-l-r::after
-            left: 0
+            @keyframes pulse
+                0%
+                    box-shadow: 0 0 0 0 $glow-color
