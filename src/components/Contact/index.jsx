@@ -70,7 +70,7 @@ const ContactSection = () => {
     const classes = useStyles();
     const { containerProps, indicatorEl } = useLoading({
         loading: true,
-        indicator: <ThreeDots width="30" color="#628aeb" />,
+        indicator: <ThreeDots width="30" color="#FFFFFF" />,
     });
 
     const sendEmail = (e) => {
