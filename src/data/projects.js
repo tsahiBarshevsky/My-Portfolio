@@ -1,39 +1,102 @@
 export let projects = new Map()
-    // .set('yeladudes',
-    //     {
-    //         index: 13,
-    //         title: 'Yeladudes',
-    //         type: 'MERN Stack',
-    //         keywords: ['mern', 'react'],
-    //         subtitle: "TBA",
-    //         date: new Date("2021-11-16"),
-    //         image: 'https://lh3.googleusercontent.com/xHUGyMlbgBS3-OFoJ9QnzZ0hBGfVNE_xOtLDhURKXPBzslnyzyx73NRh0kNOFaHNKlX-NR-QftL-nEPvc4WYawovlmW7NI3S4iNsBjxaqa-rnUBkdjjgLj6HCf_EZKmZD1KvTh5Z1Q=w2400',
-    //         stack: [
-    //             'ReactJS',
-    //             'MUI (Material-UI V5)',
-    //             'Redux',
-    //             'JavaScript',
-    //             'SASS',
-    //             'Node.js',
-    //             'ExpressJS',
-    //             'MongoDB',
-    //             'Firebase',
-    //             'Top npm packages:', ['@pathofdev/react-tag-input', 'immutability-helper', 'react-redux', 'react-router-dom', 'mongoose']
-    //         ],
-    //         utilities: [
-    //             'Postman'
-    //         ],
-    //         description:
-    //             `TBA`,
-    //         links: [
-    //             { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/yeladudes' },
-    //             { id: 1, caption: 'Characterization file', url: 'https://docs.google.com/document/d/1Qv4KBQfDuq_Jg8UezCg7VIMjGU7MrYdqqOd3XlSvRqA/edit?usp=sharing' },
-    //         ],
-    //         otherCreators: [],
-    //         youtube: null,
-    //         images: null,
-    //         web: false
-    //     })
+    .set('my-first-bank',
+        {
+            index: 14,
+            title: 'My First Bank',
+            type: 'Native App',
+            keywords: ['react', 'app'],
+            subtitle: "Money tracking app for kids",
+            date: new Date("2021-12-16"),
+            image: 'https://lh3.googleusercontent.com/kNCQETKRZGWSiGIgVBhO0kXhRlqudNdnuFPiB0FkdAsnU7tJwbtqVXovMaxGhbmVLeQNJie0ktoh_Y0WZMNd6l3UA7CYPyK3RArlcyrLy7Ds76aH_2eJC4ycpQaqClHuQPyzEJthFA=w2400',
+            stack: [
+                'React Native (Expo)',
+                'React Navigation',
+                'Redux',
+                'JavaScript',
+                'AsyncStorage',
+                'Top npm packages:', ['immutability-helper', 'react-native-uuid', 'react-native-progress', 'react-native-tab-view', 'formik', 'yup', 'react-redux']
+            ],
+            utilities: [
+                'Figma'
+            ],
+            description:
+                `My twin nephews have celebrated 9 years old this week, and since they're growing up, they're getting weekly pocket money and saving money in order to buy toys, games and more with their money.\n` +
+                `So, as a gift for their birthday, I've developed a "bank app" for them - an app that will help them to track their savings, do "deposit" or "withdrawal" and insert goals that they're saving money for.\n` +
+                `A goal contains a progress bar that shows them the progress until they will have enough money to buy it. When it's happed, they can mark this goal as bought, and the currency will drop down and a withdrawal will display.\n` +
+                `Some technical details about this project: The app was developed using React Native, Redux as state management and AsyncStorage to save the data locally.`,
+            links: [
+                { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/my-first-bank' },
+            ],
+            otherCreators: [],
+            youtube: 'https://www.youtube.com/embed/Uunfl-7zeiM',
+            images: [
+                {
+                    id: 0,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/kNCQETKRZGWSiGIgVBhO0kXhRlqudNdnuFPiB0FkdAsnU7tJwbtqVXovMaxGhbmVLeQNJie0ktoh_Y0WZMNd6l3UA7CYPyK3RArlcyrLy7Ds76aH_2eJC4ycpQaqClHuQPyzEJthFA=w2400',
+                },
+                {
+                    id: 1,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/UWxERU670kv9CVyBZPhsvZmXFOW0Yx-Ojk5pjAsWLDUOWAk_IsNzj7x52ZtS3WoBEFr6wCgN-gZE4UrW3Fg1ItYxl8D54RoTRYKlwtzrXzx2-9eF5AfAHQcL9u1I7Tu1xEzO5tHypg=w2400',
+                },
+                {
+                    id: 2,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/jCdyehpUt-RP4K3Dx7pZB_HJpMvrNiCn6V61PUhiXdk3_Iln3SxOrvS9pKK11f8Yvdt71Kzs0w79Yah85BUCc6DkfdZ_zRA9Jemf2X8h9A7sXBVms88cp4a17JCOJfEZUUfU3MXnEA=w2400',
+                }
+            ],
+            web: false
+        })
+    .set('grades',
+        {
+            index: 13,
+            title: 'Grades',
+            type: 'Native App',
+            keywords: ['react', 'app'],
+            subtitle: "An application for tracking courses and calculating an annual GPA and a general GPA for academia's students",
+            date: new Date("2021-12-07"),
+            image: 'https://lh3.googleusercontent.com/DPvusAlGmhqKUFiCF7V0jEPIesLUllnupZrEPqvdrXXwo5JK3l9m_iMBWGITJg4Mx45uBaqZ7FrJYC408XvEhND9OWyQbYr26IjjgO7WTfr2dWq4OgoUGFzAMGYJuEu1sURlkcBGAg=w2400',
+            stack: [
+                'React Native (Expo)',
+                'React Navigation',
+                'Redux',
+                'JavaScript',
+                'AsyncStorage',
+                'Top npm packages:', ['immutability-helper', 'react-native-swiper', 'react-native-uuid', 'formik', 'yup', 'react-redux']
+            ],
+            utilities: [
+                'Figma'
+            ],
+            description:
+                `As a student, I've been using an Excel file to organize the courses I've been attended each year and semester and to calculate annual and general GPA. After a talk with a friend, who is a student nowadays, about this old method, I've decided to develop this native app, so he and every other student will be able to track his courses and grades without any effort.\n` +
+                `Grades is a simple app that organizes courses by years and semesters,  achieved and unachieved credits, grades and GPA. All you need to do is insert your courses and grades and let the app do its job!\n` +
+                `Some technical details about this project: The app was developed using React Native, Redux as state management and AsyncStorage to save the data locally. The data is stored in a Map and I've been using immutability-helper for quick and efficient operations. Also, the app has a toggle switch between light and dark mode (using AsyncStorage and Redux).`,
+            links: [
+                { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/grades' },
+                { id: 1, caption: 'Download APK file', url: 'https://drive.google.com/file/d/1bQhfQWMsD8m3tI9P1yWXVuitFTrC_FtR/view?usp=sharing' }
+            ],
+            otherCreators: [],
+            youtube: 'https://www.youtube.com/embed/RfgImDJG-Gs',
+            images: [
+                {
+                    id: 0,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/DPvusAlGmhqKUFiCF7V0jEPIesLUllnupZrEPqvdrXXwo5JK3l9m_iMBWGITJg4Mx45uBaqZ7FrJYC408XvEhND9OWyQbYr26IjjgO7WTfr2dWq4OgoUGFzAMGYJuEu1sURlkcBGAg=w2400',
+                },
+                {
+                    id: 1,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/3WQVNbzM5p8ETplzMwce3yXx3YFprUhT70J5iV5qrG3ScwGNAaYKNIxnb8iP6I2iX-5I1N5pgCP3Ef7H7_JmxUcz-94fU9_8W7cER3zvR3f9RyOlQaRnZWtw3D9nAqdDoHoy5N_Pug=w2400',
+                },
+                {
+                    id: 2,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/m3E8Av31g67oeVyash0Lio7zf6YH4hR_l8e2UGGk6Xap38yx5f2mUNO5dBrZfW7g6V7M3Dxqpr8HbTFl8xI5P_YT8ivjzaIquWD_mEWKVPbdxvjNGQgvtHWLsqhjFUom8ifr99knzQ=w2400',
+                }
+            ],
+            web: false
+        })
     .set('save-the-date',
         {
             index: 12,
@@ -64,7 +127,7 @@ export let projects = new Map()
                 `The problem is I can't always remember when I've opened an ointment, and sometimes I throw it away for no reason because of it. So, in order to avoid it, I've built this native app.\n` +
                 `Save The Date is a native app that allows you to manage a list of medicine or cosmetics that you're using. Once you add a new medicine, the system will calculate the date you should throw it away, based on the opening date and usage time.\n` +
                 `Main features: Quick authentication using Firebase, setting image for your account and display how much time is left until the end date. The app also contains a calendar screen that allows you to explore which medicine opened or ended on a certain day.\n` +
-                `Save The Date is a MERN Stack app: For the server side I've been using Express.JS, MongoDB as a database and Firebase for authentication and storage .For the client side I've been using React Native (Expo) with Redux as a state management.`,
+                `Save The Date is a MERN Stack app: For the server side I've been using Express.JS, MongoDB as a database and Firebase for authentication and storage. For the client side I've been using React Native (Expo) with Redux as a state management.`,
             links: [
                 { id: 0, caption: 'Client side repository', url: 'https://github.com/tsahiBarshevsky/save-the-date-app' },
                 { id: 1, caption: 'Server side repository', url: 'https://github.com/tsahiBarshevsky/save-the-date-server' },
