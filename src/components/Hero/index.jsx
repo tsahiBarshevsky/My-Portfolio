@@ -4,8 +4,12 @@ import { makeStyles } from '@mui/styles';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { BigHead } from '@bigheads/core';
 import { Link } from 'react-scroll';
-import './styles.sass';
+import TypeAnimation from 'react-type-animation';
 import { about } from '../../data/texts';
+import './styles.sass';
+
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const useStyles = makeStyles({
     welcome: {
@@ -27,13 +31,30 @@ const useStyles = makeStyles({
 const Hero = () => {
 
     const classes = useStyles();
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div className="hero-container" id="home">
             <div id="rectangle" />
             <div id="oval">
                 <h1>Tsahi Barshavsky</h1>
-                <h3>a Frontend web developer</h3>
+                {/* <h3>a Frontend web developer</h3> */}
+                <TypeAnimation
+                    cursor={true}
+                    sequence={[
+                        'a Frontend web developer',
+                        2500,
+                        'React web applications',
+                        2500,
+                        'Landing pages and web design',
+                        2500,
+                        'React Native apps',
+                        2500
+                    ]}
+                    wrapper={matches ? "h5" : "h3"}
+                    repeat={Infinity}
+                />
             </div>
             <div className="bighead-wrapper">
                 <BigHead
@@ -61,6 +82,19 @@ const Hero = () => {
             </div>
             <div className="content">
                 <Typography variant="h4" className={classes.welcome}>Hey there, Welcome to my portfolio!</Typography>
+                {/* <TypeAnimation
+                    cursor={true}
+                    sequence={[
+                        'React web applications',
+                        2500,
+                        'Landing pages and web design',
+                        2500,
+                        'React Native apps',
+                        2500
+                    ]}
+                    wrapper="h1"
+                    repeat={Infinity}
+                /> */}
                 <div className="content-bottom">
                     {about.split('\n').map((paragraph, index) => {
                         return (

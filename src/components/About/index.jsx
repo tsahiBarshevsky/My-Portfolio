@@ -49,9 +49,12 @@ const useStyles = makeStyles(() => ({
     },
     grid: {
         padding: '0 130px',
-        // '@media (max-width: 1400px)': {
-        //     padding: 0
-        // }
+        '@media (max-width: 1440px)': {
+            padding: '0 100px'
+        },
+        '@media (max-width: 1400px)': {
+            padding: 0
+        }
     },
     item: {
         display: 'flex',
@@ -117,7 +120,7 @@ const AboutSection = () => {
                     {myStory.split('\n').map((paragraph, index) => {
                         return (
                             <Typography
-                                variant="h6"
+                                variant="h5"
                                 paragraph
                                 key={index}
                                 className={classes.aboutText}
@@ -191,6 +194,7 @@ const AboutSection = () => {
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
+                className={classes.grid}
             >
                 <Grid item xs="auto" sm={6} md={4} lg={4} xl={4} className={classes.item}>
                     <div className="about-card">

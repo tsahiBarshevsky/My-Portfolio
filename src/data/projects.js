@@ -1,4 +1,36 @@
 export let projects = new Map()
+    .set('organize-n-eat',
+        {
+            index: 15,
+            title: 'Organize & Eat',
+            type: 'Native App',
+            keywords: ['react', 'app'],
+            subtitle: "Digital recipes book",
+            date: new Date("2022-02-14"),
+            image: 'https://lh3.googleusercontent.com/uX7Uzk--7y2DICsDtRAYbsSovn85MnzgpdpVmWLOSt0vWwvNGXZQ9YgEadZIy1hgwj0qHeSCYWxpaBYM47QJLcFu9qmq_chV1tbPRsC-IEjDfjRg7vkEb-QGflvNBoUFzMlpleOW-g=w2400',
+            stack: [
+                'React Native (Expo)',
+                'React Navigation',
+                'Redux',
+                'JavaScript',
+                'AsyncStorage',
+                'Top npm packages:', ['react-native-raw-bottom-sheet', 'expo-keep-awake', 'immutability-helper', 'react-native-uuid', 'react-native-tab-view', 'react-redux']
+            ],
+            utilities: [
+                'Figma'
+            ],
+            description:
+                `I love cooking and I have so many recipes saved on my Chrome bookmarks or in a YouTube playlist. The problem is that when I want to make something, first I need to remember where the required recipe is saved. Another problem is that my phone's screen is shut down after a minute, and it sucks to turn it on again when my hands are dirty.\n` +
+                `To solve those problems, I've developed a recipes book app, where I can store all of my recipes in one place, organized by name, favorites and categories. I've been using a nice bottom sheet to display the chosen recipe and expo-keep-awake to keep my screen turn on until I finished.`,
+            links: [
+                { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/organize-n-eat' },
+                { id: 1, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/organize-n-eat' },
+            ],
+            otherCreators: [],
+            youtube: null,
+            images: null,
+            web: false
+        })
     .set('my-first-bank',
         {
             index: 14,
@@ -26,6 +58,7 @@ export let projects = new Map()
                 `Some technical details about this project: The app was developed using React Native, Redux as state management and AsyncStorage to save the data locally.`,
             links: [
                 { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/my-first-bank' },
+                { id: 1, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/my-first-bank' }
             ],
             otherCreators: [],
             youtube: 'https://www.youtube.com/embed/Uunfl-7zeiM',
@@ -74,7 +107,8 @@ export let projects = new Map()
                 `Some technical details about this project: The app was developed using React Native, Redux as state management and AsyncStorage to save the data locally. The data is stored in a Map and I've been using immutability-helper for quick and efficient operations. Also, the app has a toggle switch between light and dark mode (using AsyncStorage and Redux).`,
             links: [
                 { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/grades' },
-                { id: 1, caption: 'Download APK file', url: 'https://drive.google.com/file/d/1bQhfQWMsD8m3tI9P1yWXVuitFTrC_FtR/view?usp=sharing' }
+                { id: 1, caption: 'Download APK file', url: 'https://drive.google.com/file/d/1bQhfQWMsD8m3tI9P1yWXVuitFTrC_FtR/view?usp=sharing' },
+                { id: 2, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/grades' }
             ],
             otherCreators: [],
             youtube: 'https://www.youtube.com/embed/RfgImDJG-Gs',
@@ -133,6 +167,7 @@ export let projects = new Map()
                 { id: 1, caption: 'Server side repository', url: 'https://github.com/tsahiBarshevsky/save-the-date-server' },
                 { id: 2, caption: 'Characterization file', url: 'https://docs.google.com/document/d/1JQlYqoU-kaV9qHzSYgWDFAkeQkh3ZYAMZJdn2JSJvCc/edit?usp=sharing' },
                 { id: 3, caption: 'APK and simulator (for ios) files', url: 'https://drive.google.com/drive/folders/1mf-KnPfsnroWlUucACkVYsoIdicOMLuZ?usp=sharing' },
+                { id: 4, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/save-the-date-app' }
             ],
             otherCreators: [],
             youtube: null,
