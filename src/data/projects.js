@@ -1,34 +1,71 @@
 export let projects = new Map()
-    .set('organize-n-eat',
+    .set('cook-eat',
         {
             index: 15,
-            title: 'Organize & Eat',
+            title: 'CookEat',
             type: 'Native App',
             keywords: ['react', 'app'],
             subtitle: "Digital recipes book",
-            date: new Date("2022-02-14"),
-            image: 'https://lh3.googleusercontent.com/uX7Uzk--7y2DICsDtRAYbsSovn85MnzgpdpVmWLOSt0vWwvNGXZQ9YgEadZIy1hgwj0qHeSCYWxpaBYM47QJLcFu9qmq_chV1tbPRsC-IEjDfjRg7vkEb-QGflvNBoUFzMlpleOW-g=w2400',
+            date: new Date("2022-03-17"),
+            image: 'https://lh3.googleusercontent.com/5JJwBOQ62zwxQPH0Nl4N6CKrhbyjUgYtGkUANqsW2OQEecXNmn_KeW-AMHhEFFcwtLtMPj3BbIg_-ot40jxm0rqenginKYneMGyKzXmcmcLW6bwvbeb6PK7wfwLP9cGnyNuSgUTeIw=w2400',
             stack: [
                 'React Native (Expo)',
                 'React Navigation',
                 'Redux',
                 'JavaScript',
                 'AsyncStorage',
-                'Top npm packages:', ['react-native-raw-bottom-sheet', 'expo-keep-awake', 'immutability-helper', 'react-native-uuid', 'react-native-tab-view', 'react-redux']
+                'Firebase',
+                'ExpressJS',
+                'Top npm packages:', ['expo-image-picker', 'expo-keep-awake', 'formik', 'react-native-animatable', 'react-native-modalize', 'react-native-shared-element', 'react-redux', 'yup']
             ],
             utilities: [
-                'Figma'
+                'Figma',
+                'Cloudinary',
+                'Flaticon',
+                'Dribbble'
             ],
             description:
-                `I love cooking and I have so many recipes saved on my Chrome bookmarks or in a YouTube playlist. The problem is that when I want to make something, first I need to remember where the required recipe is saved. Another problem is that my phone's screen is shut down after a minute, and it sucks to turn it on again when my hands are dirty.\n` +
-                `To solve those problems, I've developed a recipes book app, where I can store all of my recipes in one place, organized by name, favorites and categories. I've been using a nice bottom sheet to display the chosen recipe and expo-keep-awake to keep my screen turn on until I finished.`,
+                `In recent months I've started to cultivate a new hobby: cooking and baking.\n` +
+                `In the days of computers and smartphones, the recipes are accessible on websites and social media, so it turned out that I kept desired recipes in bookmarks in Chrome, in saved posts on Facebook or Instagram, which created a number of problems for me:\n` +
+                `- I didn't always remember where each recipe was kept\n` +
+                `- The smartphone screen turns off a minute later and while cooking the hands are dirty\n` +
+                `- Sometimes the post owners delete it\n\n` +
+                `Although there are quite a few apps that allow you to create a digital recipe book, but most of them are in English, have an outdated user interface and the information is stored in the device's memory. So very quickly I found myself sitting down to design an app that would meet exactly all my needs - CookEat!\n` +
+                `I've developed CookEat using React Native and a number of code libraries from npm. In order to ensure that I could access recipes from any device I used the Firebase authentication system; I also used Firestore as the database of the app. For managing the states in the app, I've been using Redux. In addition, I used Cloudinary to store the images in the cloud and also built a small server in order to manage image delete in case of need.\n` +
+                `Because a UI was important to me, I drew inspiration from modern apps like Instagram and Gmail and sketches from Dribbble. I also used animations to enhance user experiences.`,
             links: [
-                { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/organize-n-eat' },
-                { id: 1, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/organize-n-eat' },
+                { id: 0, caption: 'Git repository', url: 'https://github.com/tsahiBarshevsky/cookEat' },
+                { id: 1, caption: 'Run the app using Expo Go', url: 'https://expo.dev/@tsahib/cookEat' },
             ],
             otherCreators: [],
-            youtube: null,
-            images: null,
+            youtube: 'https://www.youtube.com/embed/BBj64XvWFm0',
+            images: [
+                {
+                    id: 0,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/5JJwBOQ62zwxQPH0Nl4N6CKrhbyjUgYtGkUANqsW2OQEecXNmn_KeW-AMHhEFFcwtLtMPj3BbIg_-ot40jxm0rqenginKYneMGyKzXmcmcLW6bwvbeb6PK7wfwLP9cGnyNuSgUTeIw=w2400',
+                },
+                {
+                    id: 1,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/C1iKb9vK4qDvRvR_2v6m5wdYSPD0JHBkqPx2RMzgOHKdwtH8ek3A4Dz7QggC1WEKQ8rLbxgHyLH3pVIADSgXP0HkwUILoEvZ2B3AdD8lxUom142G3SAhL0kYO0m2N34nT9HGzdE92w=w2400',
+                },
+                {
+                    id: 2,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/K_FQ-gMTAvw8dwE09UqLEUjhsl58MXnptcW-lInOZn8JTMjD5gjvQEnJfDmg9Lk7bFSo2i7cP5jTpiGsDVblhX0GqdVJBFAKuJMSuRmVK1po59S3eibnBx7s1qXtuLsV_nPBO9JhIA=w2400',
+                },
+                {
+                    id: 3,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/ehovyGlKBL2wG8VPCftFlpofsk13Q9FmUzoVjWODLgguPyfrd07tkPXBFcHxOaoLwa_bx4LbydSjrdxds9l7Muz__0z9nMu6LMf15Dw5nw1Ok11pTNaAQ7MWDrPOeUjcIZlPWUcIJw=w2400',
+                },
+                {
+                    id: 4,
+                    originalTitle: 'App screenshots',
+                    original: 'https://lh3.googleusercontent.com/4ED8caB69n0AodmJQrbz_z9JPxNOOR_nwhqGXj26msX9nucVoG8I1Wb2omIreMm7OlyMQ6dAxpdMfzQvyZBKNYc8e3RfTYlhiu29nI2ift_z3Ma8E5eUiQ2WlcouoNorbYJxogPRhw=w2400',
+                }
+            ],
             web: false
         })
     .set('my-first-bank',
